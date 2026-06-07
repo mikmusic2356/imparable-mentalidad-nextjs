@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import "./globals.css";
 
 export const metadata = {
@@ -7,13 +5,31 @@ export const metadata = {
   description: "Diagnóstico de patrones de mentalidad",
 };
 
-// Helper function to read config synchronously in server component
-function getMarketingConfig() {
-  const configPath = path.join(process.cwd(), "marketing-config.json");
+const SUPABASE_URL = process.env.SUPABASE_URL || "https://hmjgcgzabuwdvoijzivp.supabase.co";
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhtamdjZ3phYnV3ZHZvaWp6aXZwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDg2MTkxNiwiZXhwIjoyMDk2NDM3OTE2fQ.CPjs5I0kBE0i6R0kbo8-oOYmgFyZx1IgNtPxbYYYZcM";
+
+// Helper function to read config from Supabase dynamically on server rendering
+async function getMarketingConfig() {
   try {
-    if (fs.existsSync(configPath)) {
-      const data = fs.readFileSync(configPath, "utf8");
-      return JSON.parse(data);
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/marketing_config?id=eq.1`, {
+      headers: {
+        "apikey": SUPABASE_SERVICE_ROLE_KEY,
+        "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`
+      },
+      next: { revalidate: 0 } // Always load fresh pixels
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.length > 0) {
+        const row = data[0];
+        return {
+          facebookPixel: { id: row.facebook_pixel_id || "", enabled: !!row.facebook_pixel_enabled },
+          googleTagManager: { id: row.gtm_id || "", enabled: !!row.gtm_enabled },
+          googleAnalytics: { id: row.ga_id || "", enabled: !!row.ga_enabled },
+          microsoftClarity: { id: row.clarity_id || "", enabled: !!row.clarity_enabled }
+        };
+      }
     }
   } catch (error) {
     console.error("Error reading config in layout:", error);
@@ -21,8 +37,8 @@ function getMarketingConfig() {
   return null;
 }
 
-export default function RootLayout({ children }) {
-  const config = getMarketingConfig();
+export default async function RootLayout({ children }) {
+  const config = await getMarketingConfig();
 
   return (
     <html lang="es">
