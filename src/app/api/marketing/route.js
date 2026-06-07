@@ -17,7 +17,8 @@ function readConfig() {
   return {
     facebookPixel: { id: "", enabled: false },
     googleTagManager: { id: "", enabled: false },
-    googleAnalytics: { id: "", enabled: false }
+    googleAnalytics: { id: "", enabled: false },
+    microsoftClarity: { id: "", enabled: false }
   };
 }
 
@@ -43,6 +44,10 @@ export async function POST(request) {
       googleAnalytics: {
         id: body.googleAnalytics?.id || "",
         enabled: !!body.googleAnalytics?.enabled
+      },
+      microsoftClarity: {
+        id: body.microsoftClarity?.id || "",
+        enabled: !!body.microsoftClarity?.enabled
       }
     };
     

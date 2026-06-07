@@ -10,5 +10,9 @@
   "googleAnalytics": {
     "id": "",
     "enabled": false
+  },
+  "microsoftClarity": {
+    "id": "",
+    "enabled": false
   }
 }

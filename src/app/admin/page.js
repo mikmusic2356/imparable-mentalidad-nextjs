@@ -14,7 +14,8 @@ export default function AdminDashboard() {
   const [config, setConfig] = useState({
     facebookPixel: { id: "", enabled: false },
     googleTagManager: { id: "", enabled: false },
-    googleAnalytics: { id: "", enabled: false }
+    googleAnalytics: { id: "", enabled: false },
+    microsoftClarity: { id: "", enabled: false }
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -248,6 +249,37 @@ export default function AdminDashboard() {
             <div className="switch-container" onClick={() => toggleEnable("googleAnalytics")}>
               <span className="switch-label">Inyección en todas las páginas:</span>
               <div className={`switch-bg ${config.googleAnalytics.enabled ? "active" : ""}`}>
+                <div className="switch-knob"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* MICROSOFT CLARITY CARD */}
+          <div className="pixel-card">
+            <div className="pixel-header">
+              <div className="pixel-name">
+                <span style={{ color: "#0078d4" }}>🟣</span> Microsoft Clarity
+              </div>
+              <div className={`pixel-status ${config.microsoftClarity?.enabled && config.microsoftClarity?.id ? "connected" : "disconnected"}`}>
+                <span className="status-dot"></span>
+                {config.microsoftClarity?.enabled && config.microsoftClarity?.id ? "Conectado" : "Desconectado"}
+              </div>
+            </div>
+
+            <div className="input-group">
+              <label className="input-label">Clarity Project ID</label>
+              <input
+                type="text"
+                className="admin-input"
+                value={config.microsoftClarity?.id || ""}
+                onChange={(e) => handleIdChange("microsoftClarity", e.target.value)}
+                placeholder="Escribe el ID del Proyecto de Clarity (Ej. x3jey0xh11)"
+              />
+            </div>
+
+            <div className="switch-container" onClick={() => toggleEnable("microsoftClarity")}>
+              <span className="switch-label">Inyección en todas las páginas:</span>
+              <div className={`switch-bg ${config.microsoftClarity?.enabled ? "active" : ""}`}>
                 <div className="switch-knob"></div>
               </div>
             </div>
