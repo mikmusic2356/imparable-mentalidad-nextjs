@@ -1,0 +1,1361 @@
+/* =========================================================================
+   MENTORÍA LANDING PAGE - CSS CONSISTENTE Y UNIFORME
+   ========================================================================= */
+
+.mentoria-page-container {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #fcf9f8 !important;
+    color: #0a1f44 !important;
+    line-height: 1.6 !important;
+    min-height: 100vh;
+}
+
+.mentoria-page-container * {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+.mentoria-page-container h1,
+.mentoria-page-container h2,
+.mentoria-page-container h3,
+.mentoria-page-container h4 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+}
+
+/* CONTENEDOR CENTRADO */
+.mentoria-page-container .container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.mentoria-page-container section {
+    padding: 80px 0 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* HERO SECTION */
+.mentoria-page-container .hero {
+    background: linear-gradient(135deg, #fcf9f8 0%, #fcf9f8 100%) !important;
+    padding-top: 100px !important;
+    text-align: center !important;
+}
+
+.mentoria-page-container .hero h1 {
+    font-size: 3.8rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 2rem !important;
+    color: #0a1f44 !important;
+}
+
+.mentoria-page-container .hero h1 span {
+    color: #E91E63 !important;
+}
+
+.mentoria-page-container .pain-points {
+    background: #fcf9f8 !important;
+    padding: 40px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05) !important;
+    text-align: left !important;
+    border-left: 10px solid #E91E63 !important;
+    margin-bottom: 50px !important;
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.mentoria-page-container .pain-points h2 {
+    color: #0a1f44 !important;
+    margin-bottom: 20px !important;
+    font-size: 2rem !important;
+}
+
+.mentoria-page-container .pain-points li {
+    list-style: none !important;
+    margin-bottom: 15px !important;
+    font-size: 1.2rem !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    color: #0a1f44 !important;
+}
+
+.mentoria-page-container .pain-points li::before {
+    content: '⚡' !important;
+    margin-right: 15px !important;
+}
+
+/* VIDEO Y REPRODUCTOR */
+.mentoria-page-container .video-container {
+    margin: 50px auto !important;
+    max-width: 800px !important;
+    width: 100% !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25) !important;
+    position: relative !important;
+    padding-bottom: 56.25% !important;
+    height: 0 !important;
+    background: #0a1f44 !important;
+}
+
+.mentoria-page-container .video-container iframe {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+}
+
+.mentoria-page-container .progress-blocker {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 10% !important;
+    width: 65% !important;
+    height: 50px !important;
+    z-index: 10 !important;
+    cursor: default !important;
+}
+
+/* MODULES */
+.mentoria-page-container .modules-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    margin-top: 50px !important;
+}
+
+.mentoria-page-container .module-card {
+    background: #fcf9f8 !important;
+    padding: 40px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    transition: 0.3s !important;
+    border-bottom: 5px solid transparent !important;
+}
+
+.mentoria-page-container .module-card:hover {
+    transform: translateY(-10px) !important;
+    border-bottom-color: #E91E63 !important;
+}
+
+.mentoria-page-container .module-card h4 {
+    color: #E91E63 !important;
+    margin-bottom: 15px !important;
+}
+
+/* SECCION URGENCIA */
+.mentoria-page-container .urgency-section {
+    background: #0a1f44 !important;
+    color: #fcf9f8 !important;
+    padding: 80px 0 !important;
+    text-align: center !important;
+}
+
+.mentoria-page-container .urgency-section h2.alert-title {
+    font-size: 2.2rem !important;
+    color: #e91e63 !important;
+    margin-bottom: 15px !important;
+}
+
+.mentoria-page-container .urgency-section p.alert-sub {
+    font-size: 1.15rem !important;
+    color: #fcf9f8 !important;
+    margin-bottom: 40px !important;
+}
+
+.mentoria-page-container .timer-box {
+    margin-bottom: 40px !important;
+}
+
+.mentoria-page-container .timer-box h3 {
+    color: #e91e63 !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 20px !important;
+}
+
+.mentoria-page-container .countdown-clock {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    font-size: 4rem !important;
+    font-weight: 900 !important;
+    margin: 20px 0 !important;
+    color: #fcf9f8 !important;
+}
+
+.mentoria-page-container .time-item {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1 !important;
+    align-items: center !important;
+}
+
+.mentoria-page-container .time-item span {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+}
+
+.mentoria-page-container .time-item small {
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    margin-top: 10px !important;
+    color: #fcf9f8 !important;
+    letter-spacing: 1px !important;
+}
+
+.mentoria-page-container .time-sep {
+    margin-bottom: 25px !important;
+    color: #fcf9f8 !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+.mentoria-page-container .urgency-section .big-numbers {
+    font-size: 5rem !important;
+    line-height: 1 !important;
+    color: #e91e63 !important;
+    margin: 30px 0 10px !important;
+}
+
+.mentoria-page-container .social-proof p {
+    font-size: 1.25rem !important;
+    color: #fcf9f8 !important;
+}
+
+.mentoria-page-container .social-proof p.last-chance {
+    margin-top: 20px !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+}
+
+.mentoria-page-container .cta-yellow-btn {
+    display: inline-block !important;
+    padding: 22px 50px !important;
+    background: #e91e63 !important;
+    color: #fcf9f8 !important;
+    text-decoration: none !important;
+    font-weight: 900 !important;
+    font-size: 1.4rem !important;
+    border-radius: 8px !important;
+    text-transform: uppercase !important;
+    transition: transform 0.2s !important;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4) !important;
+    margin: 30px 0 !important;
+}
+
+.mentoria-page-container .cta-yellow-btn:hover {
+    transform: scale(1.05) !important;
+}
+
+.mentoria-page-container .payment-strip {
+    background: transparent !important;
+    padding: 15px !important;
+    margin-top: 20px !important;
+    display: inline-block !important;
+}
+
+.mentoria-page-container .payment-strip img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* BENEFICIOS INMEDIATOS */
+.mentoria-page-container .benefits-immediate {
+    padding: 80px 0 !important;
+    background: #fcf9f8 !important;
+}
+
+.mentoria-page-container .section-title {
+    font-size: 2.2rem !important;
+    color: #0a1f44 !important;
+    margin-bottom: 50px !important;
+}
+
+.mentoria-page-container .target-icon {
+    color: #E91E63 !important;
+    margin-right: 10px !important;
+}
+
+.mentoria-page-container .benefits-grid {
+    display: flex !important;
+    justify-content: space-around !important;
+    gap: 30px !important;
+    flex-wrap: wrap !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+.mentoria-page-container .benefit-item {
+    flex: 1 !important;
+    min-width: 250px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.mentoria-page-container .icon-circle {
+    width: 80px !important;
+    height: 80px !important;
+    background: #E91E63 !important;
+    color: #fcf9f8 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2) !important;
+}
+
+.mentoria-page-container .benefit-item p {
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+    color: #1e1a17 !important;
+    max-width: 200px !important;
+    text-align: center !important;
+}
+
+.mentoria-page-container .mentorship-header {
+    background: #E91E63 !important;
+    padding: 40px 0 !important;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%) !important;
+    margin-top: -30px !important;
+}
+
+.mentoria-page-container .section-title-white {
+    font-size: 2.5rem !important;
+    color: #fcf9f8 !important;
+    margin: 0 !important;
+}
+
+/* CONTENIDO DE LA MENTORIA */
+.mentoria-page-container .mentorship-modules {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    border-bottom: 5px solid #e91e63 !important;
+}
+
+.mentoria-page-container .module-item {
+    padding: 80px 20px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    text-align: center !important;
+}
+
+.mentoria-page-container .mod-text-col {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.mentoria-page-container .module-item h3 {
+    font-size: 2.5rem !important;
+    margin-bottom: 15px !important;
+    font-weight: 900 !important;
+}
+
+.mentoria-page-container .module-item p {
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    opacity: 0.9 !important;
+}
+
+.mentoria-page-container .mod-magenta {
+    background: #E91E63 !important;
+    color: #fcf9f8 !important;
+}
+
+.mentoria-page-container .mod-gold {
+    background: #e91e63 !important;
+    color: #0a1f44 !important;
+}
+
+/* BONOS LANZAMIENTO */
+.mentoria-page-container .bonos-lanzamiento-exacto {
+    background: #0a1f44 !important;
+    padding: 80px 0 !important;
+    color: #fcf9f8 !important;
+}
+
+.mentoria-page-container .top-alert {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+    color: #fcf9f8 !important;
+    letter-spacing: 2px !important;
+}
+
+.mentoria-page-container .main-bonos-title {
+    font-size: 3.5rem !important;
+    color: #e91e63 !important;
+    margin-bottom: 30px !important;
+}
+
+.mentoria-page-container .yellow-bar {
+    background: #D4FF00 !important;
+    color: #0a1f44 !important;
+    padding: 12px 25px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+    display: inline-block !important;
+    margin-bottom: 40px !important;
+    max-width: 800px !important;
+}
+
+.mentoria-page-container .countdown-clock-exact {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 40px !important;
+    margin-bottom: 50px !important;
+}
+
+.mentoria-page-container .time-box-ex {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.mentoria-page-container .time-box-ex span {
+    font-size: 4rem !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    color: #e91e63 !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+.mentoria-page-container .time-box-ex small {
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    margin-top: 10px !important;
+    color: #fcf9f8 !important;
+    letter-spacing: 1px !important;
+}
+
+.mentoria-page-container .why-me-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 30px !important;
+    line-height: 1.2 !important;
+    color: #e91e63 !important;
+}
+
+.mentoria-page-container .green-bar {
+    background: #00FF41 !important;
+    color: #0a1f44 !important;
+    padding: 12px 25px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+    display: inline-block !important;
+    margin-bottom: 50px !important;
+}
+
+.mentoria-page-container .bonos-exact-list {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.mentoria-page-container .bono-row {
+    display: flex !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin-bottom: 45px !important;
+    gap: 30px !important;
+}
+
+.mentoria-page-container .bono-img-col {
+    flex: 0 0 180px !important;
+}
+
+.mentoria-page-container .bono-img-col img {
+    width: 100% !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.mentoria-page-container .bono-text-col h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    color: #e91e63 !important;
+}
+
+.mentoria-page-container .blue-num {
+    background: #007BFF !important;
+    color: #fcf9f8 !important;
+    width: 28px !important;
+    height: 28px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    margin-right: 15px !important;
+    font-size: 1rem !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.mentoria-page-container .bono-text-col p {
+    font-size: 1.05rem !important;
+    line-height: 1.5 !important;
+    color: #fcf9f8 !important;
+    opacity: 0.95 !important;
+}
+
+.mentoria-page-container .cta-area-exact {
+    margin-top: 50px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.mentoria-page-container .cta-yellow-exact {
+    background: #e91e63 !important;
+    color: #fcf9f8 !important;
+    padding: 18px 40px !important;
+    border-radius: 8px !important;
+    font-weight: 900 !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 1.25rem !important;
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.4) !important;
+}
+
+/* NEUROCIENCIA SECTION */
+.mentoria-page-container .neurociencia-exacta {
+    padding: 80px 0 !important;
+    background: #fcf9f8 !important;
+    color: #0a1f44 !important;
+    text-align: left !important;
+}
+
+.mentoria-page-container .neuro-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 60px !important;
+    align-items: start !important;
+}
+
+.mentoria-page-container .duly-name {
+    color: #FF9800 !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    display: block !important;
+}
+
+.mentoria-page-container .neuro-text-col h2 {
+    font-size: 3rem !important;
+    margin: 15px 0 !important;
+    line-height: 1.1 !important;
+    color: #0a1f44 !important;
+}
+
+.mentoria-page-container .scientific-source {
+    font-size: 0.9rem !important;
+    color: #666 !important;
+    margin-bottom: 30px !important;
+}
+
+.mentoria-page-container .neuro-body {
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+    color: #1e1a17 !important;
+}
+
+.mentoria-page-container .neuro-bullets {
+    list-style: none !important;
+    margin: 20px 0 !important;
+}
+
+.mentoria-page-container .neuro-bullets li {
+    font-weight: 700 !important;
+    color: #0a1f44 !important;
+    font-size: 1.1rem !important;
+}
+
+.mentoria-page-container .neuro-highlight {
+    font-size: 1.2rem !important;
+    background: #fcf9f8 !important;
+    padding: 20px !important;
+    border-left: 5px solid #E91E63 !important;
+    margin: 30px 0 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+.mentoria-page-container .final-quote {
+    color: #E91E63 !important;
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 40px !important;
+}
+
+.mentoria-page-container .brain-card {
+    background: #fcf9f8 !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid #eee !important;
+}
+
+.mentoria-page-container .brain-card img {
+    width: 100% !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+}
+
+.mentoria-page-container .brain-caption {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    color: #222 !important;
+    font-weight: 500 !important;
+    font-family: serif !important;
+}
+
+/* SECCION DE TENSION PRE-PRECIO */
+.mentoria-page-container .tension-pre-precio {
+    background: #0a1f44 !important;
+    color: #fcf9f8 !important;
+    padding: 100px 0 !important;
+    text-align: center !important;
+}
+
+.mentoria-page-container .tension-headline {
+    font-size: 3.2rem !important;
+    color: #fcf9f8 !important;
+    margin-bottom: 50px !important;
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    line-height: 1.1 !important;
+    font-weight: 900 !important;
+}
+
+.mentoria-page-container .tension-content p {
+    font-size: 1.6rem !important;
+    margin-bottom: 20px !important;
+    font-weight: 400 !important;
+    color: #fcf9f8 !important;
+}
+
+.mentoria-page-container .tension-bridge {
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 40px !important;
+    border: 2px dashed #e91e63 !important;
+    margin: 50px auto !important;
+    border-radius: 8px !important;
+    max-width: 800px !important;
+}
+
+.mentoria-page-container .tension-bridge p {
+    font-weight: 700 !important;
+    margin: 5px 0 !important;
+}
+
+.mentoria-page-container .highlight-yellow {
+    color: #e91e63 !important;
+    font-size: 1.8rem !important;
+    text-transform: uppercase !important;
+    font-weight: 900 !important;
+}
+
+.mentoria-page-container .tension-final {
+    font-size: 2.2rem !important;
+    font-weight: 900 !important;
+    color: #fcf9f8 !important;
+    background: #e91e63 !important;
+    display: inline-block !important;
+    padding: 10px 30px !important;
+    border-radius: 8px !important;
+    border: 1px solid #e91e63 !important;
+}
+
+/* OFERTA IRRESISTIBLE */
+.mentoria-page-container .oferta-irresistible-exacta {
+    background: #fcf9f8 !important;
+    padding: 100px 0 !important;
+    color: #222 !important;
+    text-align: left !important;
+    border-top: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.mentoria-page-container .oferta-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.2fr !important;
+    gap: 50px !important;
+    align-items: center !important;
+    max-width: 950px !important;
+    margin: 0 auto !important;
+}
+
+.mentoria-page-container .ebook-3d {
+    width: 100% !important;
+    max-width: 450px !important;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15)) !important;
+}
+
+.mentoria-page-container .real-value-text {
+    color: #e91e63 !important;
+    font-weight: 800 !important;
+    font-size: 1.1rem !important;
+    text-transform: uppercase !important;
+    margin-bottom: 5px !important;
+}
+
+.mentoria-page-container .launch-price-title {
+    font-size: 3rem !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 30px !important;
+    letter-spacing: -1px !important;
+    color: #0a1f44 !important;
+}
+
+.mentoria-page-container .what-you-get-header {
+    margin-bottom: 25px !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    color: #0a1f44 !important;
+    text-decoration: underline !important;
+}
+
+.mentoria-page-container .value-stack-list {
+    list-style: none !important;
+    margin-bottom: 40px !important;
+}
+
+.mentoria-page-container .value-stack-list li {
+    margin-bottom: 15px !important;
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    color: #1e1a17 !important;
+}
+
+.mentoria-page-container .check-circ {
+    background: #00FF41 !important;
+    color: #0a1f44 !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.8rem !important;
+    margin-right: 15px !important;
+    flex-shrink: 0;
+}
+
+.mentoria-page-container .final-cta-box {
+    margin-top: 30px !important;
+}
+
+.mentoria-page-container .btn-buy-final {
+    display: inline-block !important;
+    background: #e91e63 !important;
+    color: #fcf9f8 !important;
+    text-decoration: none !important;
+    padding: 25px 50px !important;
+    font-size: 1.8rem !important;
+    font-weight: 900 !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+    transition: 0.3s !important;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4) !important;
+    border: none !important;
+}
+
+.mentoria-page-container .btn-buy-final:hover {
+    transform: scale(1.03) !important;
+}
+
+/* TESTIMONIOS REALES */
+.mentoria-page-container .testimonios-section {
+    padding: 100px 0 !important;
+    background: #fafafa !important;
+}
+
+.mentoria-page-container .testimonios-title {
+    font-size: 2.5rem !important;
+    text-align: center !important;
+    margin-bottom: 60px !important;
+    color: #0a1f44 !important;
+}
+
+.mentoria-page-container .testimonios-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 30px !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+
+.mentoria-page-container .testimonio-card {
+    background: #fcf9f8 !important;
+    padding: 40px 30px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    text-align: center !important;
+    transition: transform 0.3s !important;
+}
+
+.mentoria-page-container .testimonio-card:hover {
+    transform: translateY(-10px) !important;
+}
+
+.mentoria-page-container .testimonio-img-wrap {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto 20px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    border: 4px solid #E91E63 !important;
+}
+
+.mentoria-page-container .testimonio-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.mentoria-page-container .testimonio-card h4 {
+    margin-bottom: 5px !important;
+    color: #0a1f44 !important;
+    font-size: 1.3rem !important;
+}
+
+.mentoria-page-container .testimonio-tag {
+    font-size: 0.8rem !important;
+    color: #E91E63 !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+.mentoria-page-container .testimonio-text {
+    font-style: italic !important;
+    color: #555 !important;
+    line-height: 1.6 !important;
+}
+
+/* QUIEN ES DULY HERNANDEZ */
+.mentoria-page-container .bio-duly {
+    padding: 100px 0 !important;
+    background: #fcf9f8 !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.mentoria-page-container .flex-row-bio {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 50px !important;
+}
+
+.mentoria-page-container .bio-img-col {
+    flex: 1 !important;
+    max-width: 500px !important;
+    text-align: center !important;
+}
+
+.mentoria-page-container .bio-img-col img {
+    width: 100% !important;
+    border-radius: 8px !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+    border: 8px solid #f9f9f9 !important;
+}
+
+.mentoria-page-container .bio-text-col {
+    flex: 1.2 !important;
+    max-width: 600px !important;
+    padding: 20px !important;
+}
+
+.mentoria-page-container .bio-title {
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+    color: #0a1f44 !important;
+    margin-bottom: 10px !important;
+    line-height: 1.1 !important;
+    text-align: left !important;
+}
+
+.mentoria-page-container .bio-underline {
+    width: 80px !important;
+    height: 5px !important;
+    background: #E91E63 !important;
+    margin-bottom: 30px !important;
+}
+
+.mentoria-page-container .bio-description {
+    font-size: 1.2rem !important;
+    line-height: 1.6 !important;
+    color: #444 !important;
+    margin-bottom: 30px !important;
+    text-align: left !important;
+}
+
+.mentoria-page-container .bio-achievements {
+    margin-bottom: 40px !important;
+}
+
+.mentoria-page-container .achievement {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    margin-bottom: 20px !important;
+}
+
+.mentoria-page-container .ach-icon {
+    font-size: 1.4rem !important;
+    color: #e91e63 !important;
+}
+
+.mentoria-page-container .achievement p {
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin: 0 !important;
+    font-size: 1.05rem !important;
+    text-align: left !important;
+}
+
+.mentoria-page-container .bio-mission {
+    font-size: 1.1rem !important;
+    color: #E91E63 !important;
+    font-weight: 600 !important;
+    border-left: 4px solid #E91E63 !important;
+    padding-left: 20px !important;
+    margin-left: 10px !important;
+    text-align: left !important;
+}
+
+/* PREGUNTAS FRECUENTES ACCORDION */
+.mentoria-page-container .faq-exacta {
+    background: #0a1f44 !important;
+    padding: 100px 0 !important;
+}
+
+.mentoria-page-container .faq-title {
+    color: #fcf9f8 !important;
+    font-size: 2.2rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 50px !important;
+    text-align: center !important;
+}
+
+.mentoria-page-container .faq-accordion-box {
+    max-width: 850px !important;
+    margin: 0 auto !important;
+}
+
+.mentoria-page-container .faq-row-item {
+    background: #fcf9f8 !important;
+    margin-bottom: 15px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #ddd !important;
+    transition: all 0.3s !important;
+}
+
+.mentoria-page-container .faq-question-trigger {
+    padding: 22px 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    background: #fcf9f8 !important;
+}
+
+.mentoria-page-container .faq-question-trigger p {
+    flex-grow: 1 !important;
+    font-weight: 800 !important;
+    color: #0a1f44 !important;
+    margin: 0 !important;
+    font-size: 1.1rem !important;
+    text-align: left !important;
+}
+
+.mentoria-page-container .blue-num {
+    background: #e91e63 !important;
+    color: #fcf9f8 !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 20px !important;
+    font-weight: 900 !important;
+    flex-shrink: 0 !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+.mentoria-page-container .plus-icon {
+    font-size: 1.8rem !important;
+    color: #e91e63 !important;
+    transition: transform 0.3s !important;
+    margin-left: 20px !important;
+}
+
+.mentoria-page-container .faq-answer-content {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease-out !important;
+    background: #fcf9f8 !important;
+}
+
+.mentoria-page-container .faq-answer-inner {
+    padding: 20px 30px 30px 82px !important;
+    color: #1e1a17 !important;
+    line-height: 1.6 !important;
+    font-size: 1.05rem !important;
+    border-top: 1px solid #eee !important;
+    text-align: left !important;
+}
+
+.mentoria-page-container .faq-row-item.active .faq-answer-content {
+    max-height: 400px !important;
+}
+
+.mentoria-page-container .faq-row-item.active .plus-icon {
+    transform: rotate(45deg) !important;
+}
+
+/* PARA QUIEN NO ES ESTA MENTORIA */
+.mentoria-page-container .no-es-para-ti-reloaded {
+    background: #fcf9f8 !important;
+    padding-bottom: 80px !important;
+}
+
+.mentoria-page-container .no-banner-magenta {
+    background: #E91E63 !important;
+    padding: 40px 0 !important;
+    text-align: center !important;
+    margin-bottom: 50px !important;
+}
+
+.mentoria-page-container .no-banner-magenta h2 {
+    color: #fcf9f8 !important;
+    font-size: 3rem !important;
+    font-weight: 900 !important;
+    margin: 0 !important;
+}
+
+.mentoria-page-container .no-content-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.2fr !important;
+    gap: 60px !important;
+    align-items: center !important;
+    max-width: 950px !important;
+    margin: 0 auto !important;
+}
+
+.mentoria-page-container .no-photo-main {
+    width: 100% !important;
+    border-radius: 8px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    filter: grayscale(1) !important;
+    transition: 0.5s !important;
+}
+
+.mentoria-page-container .no-photo-main:hover {
+    filter: grayscale(0) !important;
+}
+
+.mentoria-page-container .no-info-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    text-align: left !important;
+}
+
+.mentoria-page-container .no-item-box {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    padding: 25px !important;
+    background: #fcf9f8 !important;
+    border-radius: 8px !important;
+    border-left: 6px solid #e91e63 !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.mentoria-page-container .no-item-box p {
+    font-size: 1.1rem !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
+    margin: 0 !important;
+}
+
+.mentoria-page-container .bad-icon {
+    font-size: 1.8rem !important;
+    line-height: 1 !important;
+}
+
+/* GARANTIA SIN RIESGO */
+.mentoria-page-container .garantia-zona {
+    background: #0a1f44 !important;
+    padding: 80px 0 !important;
+    text-align: center !important;
+}
+
+.mentoria-page-container .garantia-banner-yellow h2 {
+    color: #e91e63 !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 40px !important;
+}
+
+.mentoria-page-container .shield-icon-box {
+    margin-bottom: 30px !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.mentoria-page-container .shield-circle {
+    background: #E91E63 !important;
+    color: #fcf9f8 !important;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 2rem !important;
+    border: 4px solid #fcf9f8 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.mentoria-page-container .garantia-text {
+    font-size: 1.15rem !important;
+    line-height: 1.6 !important;
+    color: #fcf9f8 !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.mentoria-page-container .garantia-text strong {
+    color: #e91e63 !important;
+}
+
+/* CTA FINAL AREA */
+.mentoria-page-container .final-cta-area {
+    background: #0a1f44 !important;
+    padding: 80px 0 !important;
+    text-align: center !important;
+    color: #fcf9f8 !important;
+}
+
+.mentoria-page-container .final-headline {
+    font-size: 2.22rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 10px !important;
+    letter-spacing: -0.5px !important;
+    color: #fcf9f8 !important;
+}
+
+.mentoria-page-container .final-subheadline {
+    font-weight: 800 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 40px !important;
+    text-transform: uppercase !important;
+    color: #e91e63 !important;
+}
+
+.mentoria-page-container .btn-yellow-huge {
+    background: #e91e63 !important;
+    color: #fcf9f8 !important;
+    text-decoration: none !important;
+    padding: 20px 40px !important;
+    font-size: 1.8rem !important;
+    font-weight: 900 !important;
+    border-radius: 8px !important;
+    display: inline-block !important;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4) !important;
+    margin-bottom: 40px !important;
+}
+
+.mentoria-page-container .final-last-warning {
+    font-size: 1rem !important;
+    opacity: 0.9 !important;
+    margin-bottom: 50px !important;
+    color: #fcf9f8 !important;
+}
+
+/* PRIVACY BOX */
+.mentoria-page-container .privacy-notice-box {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid #e91e63 !important;
+    color: #fcf9f8 !important;
+    text-align: left !important;
+    padding: 15px 20px !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    border-radius: 8px !important;
+    position: relative !important;
+}
+
+.mentoria-page-container .privacy-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-weight: 800 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 5px !important;
+    color: #e91e63 !important;
+}
+
+.mentoria-page-container .privacy-notice-box p {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+    color: #fcf9f8 !important;
+}
+
+.mentoria-page-container .close-x {
+    cursor: pointer !important;
+    font-size: 1.2rem !important;
+}
+
+/* MEDIA QUERIES RESPONSIVE */
+@media (max-width: 900px) {
+    .mentoria-page-container .neuro-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .mentoria-page-container .neuro-text-col h2 {
+        font-size: 2.2rem !important;
+    }
+    .mentoria-page-container .flex-row-bio {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 50px !important;
+    }
+    .mentoria-page-container .bio-underline {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .mentoria-page-container .bio-text-col {
+        text-align: center !important;
+    }
+    .mentoria-page-container .bio-title {
+        font-size: 2rem !important;
+        text-align: center !important;
+    }
+    .mentoria-page-container .bio-description {
+        text-align: center !important;
+    }
+    .mentoria-page-container .bio-mission {
+        text-align: left !important;
+    }
+    .mentoria-page-container .oferta-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+    .mentoria-page-container .value-stack-list li {
+        text-align: left !important;
+    }
+    .mentoria-page-container .launch-price-title {
+        font-size: 2rem !important;
+    }
+    .mentoria-page-container .btn-buy-final {
+        font-size: 1.5rem !important;
+        padding: 20px 30px !important;
+    }
+    .mentoria-page-container .ebook-3d {
+        max-width: 250px !important;
+        margin: 0 auto !important;
+    }
+    .mentoria-page-container .no-content-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    .mentoria-page-container .no-info-col {
+        text-align: center !important;
+    }
+    .mentoria-page-container .no-item-box {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .mentoria-page-container .hero h1 {
+        font-size: 2.2rem !important;
+    }
+    .mentoria-page-container .modules-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .mentoria-page-container .module-item h3 {
+        font-size: 1.8rem !important;
+    }
+    .mentoria-page-container .module-item p {
+        font-size: 1.1rem !important;
+    }
+    .mentoria-page-container .main-bonos-title {
+        font-size: 2.2rem !important;
+    }
+    .mentoria-page-container .time-box-ex span {
+        font-size: 2.5rem !important;
+    }
+    .mentoria-page-container .why-me-title {
+        font-size: 1.8rem !important;
+    }
+    .mentoria-page-container .bono-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .mentoria-page-container .bono-img-col {
+        flex: 0 0 auto !important;
+        width: 140px !important;
+    }
+    .mentoria-page-container .tension-headline {
+        font-size: 2.2rem !important;
+    }
+    .mentoria-page-container .tension-content p {
+        font-size: 1.2rem !important;
+    }
+    .mentoria-page-container .tension-final {
+        font-size: 1.4rem !important;
+    }
+    .mentoria-page-container .faq-title {
+        font-size: 1.6rem !important;
+    }
+    .mentoria-page-container .faq-answer-inner {
+        padding: 20px 20px 25px 60px !important;
+    }
+    .mentoria-page-container .no-banner-magenta h2 {
+        font-size: 1.5rem !important;
+    }
+    .mentoria-page-container .garantia-banner-yellow h2 {
+        font-size: 1.6rem !important;
+    }
+    .mentoria-page-container .final-headline {
+        font-size: 1.6rem !important;
+    }
+    .mentoria-page-container .btn-yellow-huge {
+        font-size: 1.2rem !important;
+        padding: 15px 25px !important;
+    }
+    .mentoria-page-container .countdown-clock {
+        font-size: 2.5rem !important;
+        gap: 10px !important;
+    }
+}

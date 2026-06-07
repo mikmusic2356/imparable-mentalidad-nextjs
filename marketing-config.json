@@ -1,0 +1,14 @@
+{
+  "facebookPixel": {
+    "id": "2025817898284850",
+    "enabled": true
+  },
+  "googleTagManager": {
+    "id": "",
+    "enabled": false
+  },
+  "googleAnalytics": {
+    "id": "",
+    "enabled": false
+  }
+}

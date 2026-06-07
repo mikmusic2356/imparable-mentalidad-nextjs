@@ -1,0 +1,305 @@
+/* =========================================================================
+   ONBOARDING IMPARABLE MENTALIDAD - CSS INDEPENDIENTE
+   ========================================================================= */
+
+#imparable-onboarding-root {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #0d0d0d !important;
+    background: #0d0d0d !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-y: auto !important;
+    z-index: 999999999 !important; /* Supera a cualquier header/footer */
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased !important;
+    display: block !important;
+}
+
+#imparable-onboarding-root * {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 1. Fondo Oscuro Cinematográfico */
+#imparable-onboarding-root .cinematic-bg {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: radial-gradient(circle at 50% 30%, #0a1f44 0%, #0d0d0d 80%) !important;
+    z-index: 1 !important;
+    opacity: 0.95 !important;
+    pointer-events: none !important;
+}
+
+/* 2. Cabecera Minimalista */
+#imparable-onboarding-root .minimal-header {
+    position: absolute !important;
+    top: 40px !important;
+    left: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 10 !important;
+}
+
+#imparable-onboarding-root .logo-text {
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 3px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    text-transform: uppercase !important;
+}
+
+/* 3. Contenedor Principal */
+#imparable-onboarding-root .onboarding-wrapper {
+    width: 100% !important;
+    min-height: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 120px 20px 60px 20px !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+#imparable-onboarding-root .onboarding-card {
+    width: 100% !important;
+    max-width: 700px !important;
+    text-align: center !important;
+    transition: all 1s ease !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* 4. Barra de progreso Sutil */
+#imparable-onboarding-root .progress-container {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: 2px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin: 0 auto 60px auto !important;
+    overflow: hidden !important;
+}
+
+#imparable-onboarding-root .progress-bar {
+    height: 100% !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    width: 0% !important;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 5. Tipografía de Preguntas (League Spartan) */
+#imparable-onboarding-root .onboarding-card h2 {
+    font-family: 'League Spartan', sans-serif !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 60px !important;
+    color: #ffffff !important;
+    text-align: center !important;
+}
+
+/* 6. Opciones Tipo Tarjetas (Montserrat) */
+#imparable-onboarding-root .options-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+}
+
+#imparable-onboarding-root .option-btn {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 22px 30px !important;
+    border-radius: 8px !important;
+    color: #f5f2eb !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 400 !important;
+    cursor: pointer !important;
+    transition: all 0.4s ease !important;
+    text-align: center !important;
+    width: 100% !important;
+    backdrop-filter: blur(10px) !important;
+    outline: none !important;
+}
+
+#imparable-onboarding-root .option-btn:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-2px) !important;
+    color: #ffffff !important;
+}
+
+#imparable-onboarding-root .option-btn.selected {
+    border-color: #e91e63 !important;
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.3) !important;
+    background: rgba(233, 30, 99, 0.1) !important;
+    color: #ffffff !important;
+}
+
+/* 7. Pantalla de Carga Minimalista */
+#imparable-onboarding-root .loading-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 60px 0 !important;
+}
+
+#imparable-onboarding-root .loading-text {
+    font-family: 'League Spartan', sans-serif !important;
+    font-size: 1.5rem !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    animation: pulse-opacity 2s infinite !important;
+}
+
+@keyframes pulse-opacity {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* 8. Pantalla de Resultados Cinematográfica */
+#imparable-onboarding-root .result-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+#imparable-onboarding-root .editorial-line {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300 !important;
+    color: rgba(255, 255, 255, 0.2) !important;
+    margin: 25px 0 !important;
+    letter-spacing: 2px !important;
+}
+
+#imparable-onboarding-root .result-title {
+    font-family: 'League Spartan', sans-serif !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 30px !important;
+    letter-spacing: -1px !important;
+    text-transform: uppercase !important;
+}
+
+/* Colores de Perfiles de Diagnóstico */
+#imparable-onboarding-root.profile-sobrecarga .result-title { color: #f5f2eb !important; }
+#imparable-onboarding-root.profile-autosabotaje .result-title { color: #e91e63 !important; }
+#imparable-onboarding-root.profile-miedo .result-title { color: #ff9800 !important; }
+
+#imparable-onboarding-root .result-desc {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    color: #f5f2eb !important;
+    margin-bottom: 50px !important;
+    max-width: 600px !important;
+    font-weight: 400 !important;
+}
+
+/* 9. Botones CTA Finales con Pulsación */
+#imparable-onboarding-root .cta-final-btn {
+    font-family: 'Raleway', sans-serif !important;
+    background-color: #e91e63 !important;
+    background: #e91e63 !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 2px !important;
+    padding: 20px 50px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.5s ease !important;
+    margin-bottom: 10px !important;
+    animation: pulse-pink 2s infinite !important;
+    outline: none !important;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4) !important;
+}
+
+@keyframes pulse-pink {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.7) !important; }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(233, 30, 99, 0) !important; }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(233, 30, 99, 0) !important; }
+}
+
+#imparable-onboarding-root .cta-final-btn:hover {
+    background: #ff3377 !important;
+    color: #ffffff !important;
+    transform: scale(1.05) !important;
+}
+
+/* Botón Secundario de Información */
+#imparable-onboarding-root .cta-info-btn {
+    font-family: 'Raleway', sans-serif !important;
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    text-transform: uppercase !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1.5px !important;
+    padding: 12px 30px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.5s ease !important;
+    margin-top: 10px !important;
+}
+
+#imparable-onboarding-root .cta-info-btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* 10. Animaciones y transiciones */
+#imparable-onboarding-root .fadeIn {
+    animation: cinematicFadeIn 1s ease-out forwards !important;
+}
+@keyframes cinematicFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#imparable-onboarding-root .fadeOut {
+    animation: cinematicFadeOut 0.8s ease-in forwards !important;
+}
+@keyframes cinematicFadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #imparable-onboarding-root .onboarding-card h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 40px !important;
+    }
+    #imparable-onboarding-root .result-title {
+        font-size: 2.2rem !important;
+    }
+    #imparable-onboarding-root .option-btn {
+        padding: 18px 20px !important;
+    }
+    #imparable-onboarding-root .cta-final-btn {
+        width: 100% !important;
+        padding: 18px 20px !important;
+    }
+}
