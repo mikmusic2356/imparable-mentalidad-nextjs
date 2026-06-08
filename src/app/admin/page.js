@@ -5,6 +5,7 @@ import "./admin.css";
 
 export default function AdminDashboard() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -20,12 +21,22 @@ export default function AdminDashboard() {
 
   const [isLoading, setIsLoading] = useState(false);
 
+  // Load login state on component mount
+  useEffect(() => {
+    const savedLogin = localStorage.getItem("admin_logged_in");
+    if (savedLogin === "true") {
+      setIsLoggedIn(true);
+      setEmail("idullyh2356@gmail.com"); // Set default visual email
+    }
+    setIsInitialized(true);
+  }, []);
+
   // Fetch configuration on component mount if logged in
   useEffect(() => {
-    if (isLoggedIn) {
+    if (isLoggedIn && isInitialized) {
       fetchConfig();
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn, isInitialized]);
 
   const fetchConfig = async () => {
     try {
@@ -46,9 +57,16 @@ export default function AdminDashboard() {
     // Validate credentials
     if (email === "idullyh2356@gmail.com" && password === "Meteoro.65*") {
       setIsLoggedIn(true);
+      localStorage.setItem("admin_logged_in", "true");
     } else {
       setError("Credenciales incorrectas. Inténtalo de nuevo.");
     }
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem("admin_logged_in");
+    setPassword("");
   };
 
   const handleSave = async (e) => {
@@ -98,6 +116,17 @@ export default function AdminDashboard() {
       }
     }));
   };
+
+  // --- INITIALIZATION ---
+  if (!isInitialized) {
+    return (
+      <div className="admin-panel-root">
+        <div className="glass-container">
+          <p className="admin-subtitle" style={{ textAlign: "center" }}>Cargando panel...</p>
+        </div>
+      </div>
+    );
+  }
 
   // --- LOGIN SCREEN ---
   if (!isLoggedIn) {
@@ -152,7 +181,7 @@ export default function AdminDashboard() {
             <h1 className="admin-title" style={{ textAlign: "left", margin: 0 }}>Dashboard Marketing</h1>
             <span className="user-badge">{email}</span>
           </div>
-          <button className="btn-logout" onClick={() => setIsLoggedIn(false)}>
+          <button className="btn-logout" onClick={handleLogout}>
             Cerrar Sesión
           </button>
         </div>
