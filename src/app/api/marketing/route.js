@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-const SUPABASE_URL = process.env.SUPABASE_URL || "https://hmjgcgzabuwdvoijzivp.supabase.co";
-const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhtamdjZ3phYnV3ZHZvaWp6aXZwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDg2MTkxNiwiZXhwIjoyMDk2NDM3OTE2fQ.CPjs5I0kBE0i6R0kbo8-oOYmgFyZx1IgNtPxbYYYZcM";
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 // Helper function to read from Supabase REST API
 async function readConfigFromSupabase() {
