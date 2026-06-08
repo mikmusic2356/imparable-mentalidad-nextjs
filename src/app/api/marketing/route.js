@@ -22,7 +22,7 @@ async function readConfigFromSupabase() {
           facebookPixel: { id: row.facebook_pixel_id || "", enabled: !!row.facebook_pixel_enabled },
           googleTagManager: { id: row.gtm_id || "", enabled: !!row.gtm_enabled },
           googleAnalytics: { id: row.ga_id || "", enabled: !!row.ga_enabled },
-          microsoftClarity: { id: row.clarity_id || "", enabled: !!row.clarity_enabled }
+          microsoftClarity: { id: row.microsoft_clarity_id || "", enabled: !!row.microsoft_clarity_enabled }
         };
       }
     } else {
@@ -57,8 +57,8 @@ export async function POST(request) {
       gtm_enabled: !!body.googleTagManager?.enabled,
       ga_id: body.googleAnalytics?.id || "",
       ga_enabled: !!body.googleAnalytics?.enabled,
-      clarity_id: body.microsoftClarity?.id || "",
-      clarity_enabled: !!body.microsoftClarity?.enabled
+      microsoft_clarity_id: body.microsoftClarity?.id || "",
+      microsoft_clarity_enabled: !!body.microsoftClarity?.enabled
     };
 
     const res = await fetch(`${SUPABASE_URL}/rest/v1/marketing_config?id=eq.1`, {
@@ -81,7 +81,7 @@ export async function POST(request) {
           facebookPixel: { id: updatedRow.facebook_pixel_id || "", enabled: !!updatedRow.facebook_pixel_enabled },
           googleTagManager: { id: updatedRow.gtm_id || "", enabled: !!updatedRow.gtm_enabled },
           googleAnalytics: { id: updatedRow.ga_id || "", enabled: !!updatedRow.ga_enabled },
-          microsoftClarity: { id: updatedRow.clarity_id || "", enabled: !!updatedRow.clarity_enabled }
+          microsoftClarity: { id: updatedRow.microsoft_clarity_id || "", enabled: !!updatedRow.microsoft_clarity_enabled }
         }
       });
     } else {

@@ -27,7 +27,7 @@ async function getMarketingConfig() {
           facebookPixel: { id: row.facebook_pixel_id || "", enabled: !!row.facebook_pixel_enabled },
           googleTagManager: { id: row.gtm_id || "", enabled: !!row.gtm_enabled },
           googleAnalytics: { id: row.ga_id || "", enabled: !!row.ga_enabled },
-          microsoftClarity: { id: row.clarity_id || "", enabled: !!row.clarity_enabled }
+          microsoftClarity: { id: row.microsoft_clarity_id || "", enabled: !!row.microsoft_clarity_enabled }
         };
       }
     }
