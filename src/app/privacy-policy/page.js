@@ -123,8 +123,15 @@ export default function PrivacyPolicy() {
               borderTop: "1px solid rgba(255, 255, 255, 0.1)",
               paddingTop: "30px"
             }}>
+              <style dangerouslySetInnerHTML={{__html: `
+                .btn-back:hover {
+                  background: rgba(255, 255, 255, 0.1) !important;
+                  border-color: rgba(255, 255, 255, 0.6) !important;
+                }
+              `}} />
               <a 
                 href="/" 
+                className="btn-back"
                 style={{
                   display: "inline-block",
                   fontFamily: "'Raleway', sans-serif",
@@ -137,14 +144,6 @@ export default function PrivacyPolicy() {
                   letterSpacing: "1.5px",
                   textTransform: "uppercase",
                   transition: "all 0.4s ease"
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)";
-                  e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.6)";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.background = "transparent";
-                  e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.3)";
                 }}
               >
                 Volver al Diagnóstico
