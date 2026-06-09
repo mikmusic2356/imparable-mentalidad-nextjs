@@ -1,4 +1,5 @@
 import "./globals.css";
+import ClarityTracker from "@/components/ClarityTracker";
 
 export const dynamic = "force-dynamic";
 
@@ -110,22 +111,9 @@ export default async function RootLayout({ children }) {
           </>
         )}
 
-        {/* Microsoft Clarity Code */}
-        {config?.microsoftClarity?.enabled && config?.microsoftClarity?.id && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(c,l,a,r,i,t,y){
-                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                })(window, document, "clarity", "script", "${config.microsoftClarity.id}");
-              `
-            }}
-          />
-        )}
       </head>
       <body>
+        <ClarityTracker config={config?.microsoftClarity} />
         {/* Google Tag Manager (Noscript) */}
         {config?.googleTagManager?.enabled && config?.googleTagManager?.id && (
           <noscript>
