@@ -260,8 +260,12 @@ export default function Home() {
                 
                 <div className="editorial-line" style={{ marginBottom: "50px" }}>────────</div>
                 
+                <div className="cta-note">
+                  ✨ Da clic aquí y un asesor real se pondrá en contacto contigo por WhatsApp para guiarte paso a paso en la mentoría Del Miedo a la Acción.
+                </div>
+                
                 <a 
-                  href="https://go.hotmart.com/C100717660P?dp=1" 
+                  href="https://wa.me/573171646811?text=Hola,%20quiero%20saber%20m%C3%A1s%20e%20ingresar%20a%20la%20mentor%C3%ADa%20Del%20Miedo%20a%20la%20Acci%C3%B3n" 
                   className="cta-final-btn" 
                   target="_blank"
                   rel="noopener noreferrer"

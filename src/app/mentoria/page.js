@@ -74,50 +74,23 @@ export default function Mentoria() {
 
   return (
     <div className="mentoria-page-container">
-      {/* HERO SECTION */}
+      {/* 1. HERO SECTION */}
       <section className="hero">
         <div className="container">
-          <h1>DEJA DE SOBREVIVIR.<br /><span>DOMINA TU MENTE</span> Y PASA A LA ACCIÓN.</h1>
-
-          <div className="pain-points">
-            <h2>¿Te sientes así?</h2>
-            <ul>
-              <li>Sabes lo que quieres pero no avanzas.</li>
-              <li>Piensas demasiado antes de actuar.</li>
-              <li>Postergas decisiones importantes.</li>
-              <li>Esperas sentirte listo… y ese momento no llega.</li>
-            </ul>
-            <p style={{ fontWeight: 700, fontSize: "1.3rem", marginTop: "20px" }}>
-              Entonces no necesitas más motivación. Necesitas entrenamiento mental.
-            </p>
-          </div>
-
-          <div style={{
-            background: "#0a1f44",
-            color: "#fcf9f8",
-            padding: "40px",
-            borderRadius: "8px",
-            margin: "40px 0",
-            textAlign: "left"
+          <h1 style={{ textTransform: "none", color: "#0a1f44", fontSize: "3.2rem" }}>
+            Aprende a gobernar tu mente y deja de vivir en piloto automático.
+          </h1>
+          
+          <p style={{ 
+            fontSize: "1.3rem", 
+            lineHeight: "1.6", 
+            color: "#0a1f44", 
+            maxWidth: "850px", 
+            margin: "20px auto 40px auto", 
+            fontWeight: "500" 
           }}>
-            <h3 style={{
-              backgroundColor: "var(--primary)",
-              color: "#fcf9f8",
-              display: "inline-block",
-              padding: "10px 20px",
-              borderRadius: "8px",
-              marginBottom: "25px",
-              lineHeight: "1.2",
-              fontWeight: 900
-            }}>
-              Mira el siguiente video porque en los próximos minutos entenderás:
-            </h3>
-            <ul style={{ listStyle: "none", fontSize: "1.25rem", lineHeight: "1.6" }}>
-              <li>• Por qué tu mente te frena.</li>
-              <li>• Por qué la disciplina sola no funciona.</li>
-              <li>• Y cómo puedes empezar a cambiar esto en solo 5 días.</li>
-            </ul>
-          </div>
+            Cinco días para dejar de repetir la misma historia y empezar a actuar con responsabilidad hacia la vida que realmente deseas construir.
+          </p>
 
           {/* VIMEO VIDEO CONTAINER */}
           <div className="video-container" style={{
@@ -127,7 +100,9 @@ export default function Mentoria() {
             overflow: "hidden",
             borderRadius: "8px",
             boxShadow: "0 40px 80px rgba(0,0,0,0.3)",
-            background: "#0a1f44"
+            background: "#0a1f44",
+            maxWidth: "800px",
+            margin: "0 auto 30px auto"
           }}>
             <iframe
               src="https://player.vimeo.com/video/1107914366?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -150,37 +125,50 @@ export default function Mentoria() {
             }}></div>
           </div>
 
-          <div style={{
-            margin: "30px auto 50px",
-            maxWidth: "800px",
-            textAlign: "left",
-            background: "#fefefe",
-            padding: "30px",
-            borderLeft: "5px solid var(--primary)",
-            borderRadius: "8px",
-            boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
-            color: "#222"
-          }}>
-            <h4 style={{ color: "var(--primary)", fontSize: "1.4rem", marginBottom: "15px" }}>👉 IMPORTANTE</h4>
-            <p style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "20px" }}>Este video no es motivación.</p>
-            <p style={{ marginBottom: "10px", fontWeight: 600 }}>Es una explicación clara de:</p>
-            <ul style={{ listStyle: "none", paddingLeft: "10px", fontSize: "1.1rem", lineHeight: "1.6", marginBottom: "20px" }}>
-              <li>• Por qué tu mente repite los mismos patrones.</li>
-              <li>• Por qué sabes mucho pero actúas poco.</li>
-              <li>• Y cómo funciona el entrenamiento mental que utilizamos en esta mentoría.</li>
-            </ul>
-            <p style={{ fontStyle: "italic", color: "#555", background: "#f9f9f9", padding: "15px", borderRadius: "8px" }}>
-              Si sientes que llevas tiempo intentando cambiar sin lograrlo, empieza por entender esto.
-            </p>
+          <div style={{ marginTop: "20px", marginBottom: "30px" }}>
+            <a href="#compra" className="cta-yellow-btn">
+              Quiero unirme a la mentoría
+            </a>
           </div>
         </div>
       </section>
 
-      {/* URGENCY SECTION */}
+      {/* URGENCY SECTION / SECCIÓN DE IDENTIFICACIÓN */}
       <section className="urgency-section">
         <div className="container">
-          <h2 className="alert-title">🚨 ESTA MENTORÍA NO ES PARA TODO EL MUNDO.</h2>
-          <p className="alert-sub">👉 Accede a mentorías en vivo con Duly Hernández y un equipo que te impulsa a dejar de postergar y empezar a accionar.</p>
+          <h2 className="alert-title" style={{ color: "#ffffff", textTransform: "none", fontSize: "2.3rem", marginBottom: "30px" }}>
+            ¿Te identificas con alguna de estas situaciones?
+          </h2>
+          
+          <div style={{ 
+            background: "rgba(255, 255, 255, 0.05)", 
+            padding: "30px 40px", 
+            borderRadius: "8px", 
+            maxWidth: "700px", 
+            margin: "0 auto 30px auto", 
+            textAlign: "left",
+            border: "1px solid rgba(255, 255, 255, 0.1)"
+          }}>
+            <ul style={{ listStyle: "none", padding: 0 }}>
+              <li style={{ marginBottom: "15px", fontSize: "1.2rem", color: "#fcf9f8" }}>👉 Sobrepiensas constantemente.</li>
+              <li style={{ marginBottom: "15px", fontSize: "1.2rem", color: "#fcf9f8" }}>👉 Tomas decisiones desde el miedo.</li>
+              <li style={{ marginBottom: "15px", fontSize: "1.2rem", color: "#fcf9f8" }}>👉 Sabes qué hacer pero no logras actuar.</li>
+              <li style={{ marginBottom: "15px", fontSize: "1.2rem", color: "#fcf9f8" }}>👉 Vuelves una y otra vez al mismo lugar.</li>
+              <li style={{ marginBottom: "15px", fontSize: "1.2rem", color: "#fcf9f8" }}>👉 Tu mente nunca descansa.</li>
+              <li style={{ marginBottom: "0px", fontSize: "1.2rem", color: "#fcf9f8" }}>👉 Sientes que has intentado cambiar muchas veces sin lograrlo.</li>
+            </ul>
+          </div>
+
+          <p style={{ 
+            fontWeight: 700, 
+            fontSize: "1.35rem", 
+            color: "#E91E63", 
+            maxWidth: "800px", 
+            margin: "20px auto 45px auto",
+            lineHeight: "1.4"
+          }}>
+            Probablemente no te falte fuerza de voluntad. Estás viviendo en piloto automático.
+          </p>
 
           <div className="timer-box">
             <h3>⏰ ÚLTIMOS DÍAS PARA UNIRTE ⏰</h3>
@@ -216,60 +204,64 @@ export default function Mentoria() {
         </div>
       </section>
 
-      {/* IMMEDIATE BENEFITS */}
-      <section className="benefits-immediate">
-        <div className="container">
-          <h2 className="section-title"><span className="target-icon">🎯</span> BENEFICIOS INMEDIATOS</h2>
-          <div className="benefits-grid">
-            <div className="benefit-item">
-              <div className="icon-circle">❤️</div>
-              <p>Transforma tu relación con tus miedos</p>
-            </div>
-            <div className="benefit-item">
-              <div className="icon-circle">🧠</div>
-              <p>Rediseña tus patrones de pensamiento</p>
-            </div>
-            <div className="benefit-item">
-              <div className="icon-circle">✅</div>
-              <p>Recupera el control de tu vida</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* 5. PRESENTACIÓN DE LA MENTORÍA */}
       <section className="mentorship-header">
         <div className="container">
-          <h2 className="section-title-white"><span className="target-icon">🎯</span> CONTENIDO DE LA MENTORÍA</h2>
+          <h2 className="section-title-white"><span className="target-icon">🎯</span> ¿QUÉ ES DEL MIEDO A LA ACCIÓN®?</h2>
         </div>
       </section>
 
-      {/* MODULES DETAIL */}
-      <section className="mentorship-modules">
-        <div className="module-item mod-magenta">
-          <div className="mod-text-col">
-            <h3>📘 MÓDULO 1</h3>
-            <p>Identifica y rompe los patrones mentales que te frenan.</p>
+      <section className="urgency-section" style={{ padding: "60px 0", borderBottom: "5px solid #e91e63" }}>
+        <div className="container" style={{ maxWidth: "800px", textAlign: "left" }}>
+          <p style={{ fontSize: "1.25rem", lineHeight: "1.7", marginBottom: "40px", color: "#ffffff", textAlign: "center" }}>
+            Del Miedo a la Acción® es una mentoría grupal de cinco días diseñada para ayudarte a reconocer los patrones que hoy gobiernan tu mente y comenzar a actuar con mayor conciencia, responsabilidad y paz.
+          </p>
+
+          <div style={{ 
+            background: "rgba(255, 255, 255, 0.05)", 
+            padding: "30px 40px", 
+            borderRadius: "8px",
+            border: "1px solid rgba(255, 255, 255, 0.1)"
+          }}>
+            <h3 style={{ color: "#E91E63", fontSize: "1.3rem", marginBottom: "20px", textTransform: "uppercase", letterSpacing: "1px" }}>
+              🎁 La experiencia incluye:
+            </h3>
+            <ul style={{ listStyle: "none", padding: 0 }}>
+              <li style={{ padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.08)", fontSize: "1.15rem", color: "#fcf9f8" }}>💬 Acompañamiento diario por WhatsApp.</li>
+              <li style={{ padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.08)", fontSize: "1.15rem", color: "#fcf9f8" }}>📝 Ejercicios prácticos.</li>
+              <li style={{ padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.08)", fontSize: "1.15rem", color: "#fcf9f8" }}>💡 Reflexiones guiadas.</li>
+              <li style={{ padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.08)", fontSize: "1.15rem", color: "#fcf9f8" }}>👥 Comunidad privada.</li>
+              <li style={{ padding: "12px 0", fontSize: "1.15rem", color: "#fcf9f8" }}>✨ Encuentro final en vivo.</li>
+            </ul>
           </div>
         </div>
+      </section>
 
-        <div className="module-item mod-gold">
-          <div className="mod-text-col">
-            <h3>⚡ Módulo 2</h3>
-            <p>Técnicas para actuar incluso cuando el miedo esté presente.</p>
-          </div>
-        </div>
-
-        <div className="module-item mod-magenta">
-          <div className="mod-text-col">
-            <h3>💎 Módulo 3</h3>
-            <p>Estrategias de autoconfianza y autocontrol mental.</p>
-          </div>
-        </div>
-
-        <div className="module-item mod-gold">
-          <div className="mod-text-col">
-            <h3>🚀 Módulo 4</h3>
-            <p>Plan de acción concreto para tu siguiente gran paso.</p>
+      {/* 6. BENEFICIOS */}
+      <section className="benefits-immediate">
+        <div className="container">
+          <h2 className="section-title"><span className="target-icon">🎯</span> Lo que comenzarás a desarrollar durante la mentoría</h2>
+          <div className="benefits-grid" style={{ justifyContent: "center", gap: "40px" }}>
+            <div className="benefit-item">
+              <div className="icon-circle">🔍</div>
+              <p style={{ color: "#0a1f44", fontWeight: "700" }}>Reconocer tus patrones automáticos.</p>
+            </div>
+            <div className="benefit-item">
+              <div className="icon-circle">🧩</div>
+              <p style={{ color: "#0a1f44", fontWeight: "700" }}>Comprender por qué repites la misma historia.</p>
+            </div>
+            <div className="benefit-item">
+              <div className="icon-circle">🧘</div>
+              <p style={{ color: "#0a1f44", fontWeight: "700" }}>Gestionar mejor tus emociones.</p>
+            </div>
+            <div className="benefit-item">
+              <div className="icon-circle">💡</div>
+              <p style={{ color: "#0a1f44", fontWeight: "700" }}>Tomar decisiones con mayor claridad.</p>
+            </div>
+            <div className="benefit-item">
+              <div className="icon-circle">🕊️</div>
+              <p style={{ color: "#0a1f44", fontWeight: "700" }}>Empezar a construir una vida con mayor paz.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -354,20 +346,29 @@ export default function Mentoria() {
           <div className="neuro-grid">
             <div className="neuro-text-col">
               <span className="duly-name">DULY HERNANDEZ</span>
-              <h2>🧠 EL PROBLEMA ESTÁ EN TU MENTE.</h2>
-              <p className="scientific-source">Estudios científicos basados en <i>(National Science Foundation, 2024)</i>.</p>
+              <h2 style={{ textTransform: "none", fontSize: "2.2rem", color: "#0a1f44", marginBottom: "20px" }}>
+                ¿Qué significa vivir en piloto automático?
+              </h2>
 
-              <p className="neuro-body">Estudios de neurociencia han demostrado que <strong>más del 80% de nuestros pensamientos diarios son automáticos y repetitivos</strong>, y la mayoría están condicionados por el miedo, la culpa o la duda <i>(National Science Foundation, 2024)</i>.</p>
+              <p className="neuro-body">
+                Vivir en piloto automático significa que tu mente repite las mismas reacciones del pasado de manera subconsciente. Tomas decisiones basadas en el miedo y la evitación, creyendo que estás decidiendo libremente.
+              </p>
 
-              <ul className="neuro-bullets">
-                <li>👉 Tu cerebro no está diseñado para hacerte feliz, sino para mantenerte a salvo y en lo conocido.</li>
-              </ul>
+              <p className="neuro-body">
+                Aunque por fuera parece que tienes el control, tu cerebro está configurado para mantenerte en tu zona cómoda a toda costa. Por eso, a pesar de tus intenciones de cambiar, terminas repitiendo los mismos ciclos.
+              </p>
 
-              <p className="neuro-body">Por eso repites patrones, postergas decisiones y <strong>dudas de ti misma</strong>, incluso cuando sabes lo que quieres.</p>
+              <p className="neuro-body">
+                Salir de este estado no se logra buscando motivación externa o leyendo teoría. Requiere entrenar tu mente para identificar el patrón automático en el momento exacto en que ocurre y elegir una respuesta diferente y consciente.
+              </p>
 
-              <p className="neuro-highlight"><strong>No estás roto. Estás programado para sobrevivir, no para avanzar.</strong><br />Pero eso puede reentrenarse.</p>
+              <h2 style={{ textTransform: "none", fontSize: "2.2rem", color: "#E91E63", marginTop: "40px", marginBottom: "20px" }}>
+                La buena noticia es que tu mente puede entrenarse.
+              </h2>
 
-              <p className="final-quote">🧠 Tu vida no cambia con motivación, <strong>cambia con acción.</strong> Da el primer paso.</p>
+              <p className="neuro-body">
+                Así como aprendiste a reaccionar con miedo o duda, puedes reprogramar tu cerebro. Los patrones mentales aprendidos también pueden modificarse mediante entrenamiento consciente.
+              </p>
 
               <div className="payment-area-small">
                 <img src="/wp-content/uploads/2026/04/METODOS-DE-PAGO-LP-1.png" alt="Pagos" style={{ maxWidth: "300px" }} />
@@ -407,31 +408,25 @@ export default function Mentoria() {
       </section>
 
       {/* OFERTA IRRESISTIBLE */}
-      <section className="oferta-irresistible-exacta">
+      <section className="oferta-irresistible-exacta" id="compra">
         <div className="container">
           <div className="oferta-grid">
             <div className="oferta-img-col">
               <img src="/wp-content/uploads/2026/04/transparent-Photoroom.webp" alt="Ebook 3D" className="ebook-3d" />
             </div>
 
-            <div className="oferta-text-col">
-              <p className="real-value-text">💥 PRECIO REAL DE ESTA MENTORÍA: $87,18 USD</p>
-              <h2 className="launch-price-title">PRECIO DE LANZAMIENTO: $44,83 USD 🚀</h2>
-
-              <div className="what-you-get-header">
-                🎁 Esto es lo que recibirás dentro de la mentoría:
+            <div className="oferta-text-col" style={{ textAlign: "left" }}>
+              <h2 className="launch-price-title" style={{ fontSize: "2.3rem", textTransform: "none", color: "#0a1f44", marginBottom: "10px" }}>
+                Mentoría Del Miedo a la Acción®
+              </h2>
+              
+              <div style={{ fontSize: "3rem", fontWeight: "900", color: "#E91E63", margin: "20px 0" }}>
+                $44,83 USD
               </div>
 
-              <ul className="value-stack-list">
-                <li><span className="check-circ">✅</span> 🔓 Más de 25 horas de transformación mental guiada en video Valor real: $100 USD</li>
-                <li><span className="check-circ">✅</span> 🔊 Más de 120 bloqueos emocionales y miedos frecuentes respondidos en video Valor real: $197 USD</li>
-                <li><span className="check-circ">✅</span> 📝 Evaluaciones conscientes e interactivas al final de cada módulo</li>
-                <li><span className="check-circ">✅</span> 📝 Evaluaciones activadoras al final de cada módulo</li>
-              </ul>
-
-              <div className="final-cta-box">
+              <div className="final-cta-box" style={{ marginTop: "30px" }}>
                 <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="btn-buy-final">
-                  ¡COMPRAR AHORA!<br />POR $44,83 USD ✔️
+                  ¡COMPRAR AHORA! ✔️
                 </a>
               </div>
             </div>
@@ -481,27 +476,10 @@ export default function Mentoria() {
             <img src="/wp-content/uploads/2026/04/WhatsApp-Image-2025-06-03-at-17.24.13.webp" alt="Duly Hernández" />
           </div>
           <div className="bio-text-col">
-            <h2 className="bio-title">¿QUIÉN ES DULY HERNÁNDEZ?</h2>
+            <h2 className="bio-title">¿QUIÊN ES DULY HERNÁNDEZ?</h2>
             <div className="bio-underline"></div>
             <p className="bio-description">
-              Soy una apasionada del potencial humano y experta en reprogramación mental. He dedicado años a entender cómo funciona nuestro cerebro y por qué el miedo es el principal freno de nuestros sueños.
-            </p>
-            <div className="bio-achievements">
-              <div className="achievement">
-                <span className="ach-icon">⭐</span>
-                <p>+1,000 vidas transformadas a través de mis mentorías.</p>
-              </div>
-              <div className="achievement">
-                <span className="ach-icon">⭐</span>
-                <p>Experta en Neurociencia aplicada al éxito personal.</p>
-              </div>
-              <div className="achievement">
-                <span className="ach-icon">⭐</span>
-                <p>Mentora de líderes e imparables decididos a romper sus techos de cristal.</p>
-              </div>
-            </div>
-            <p className="bio-mission">
-              <em>"Mi misión es que dejes de ser espectador de tu propia vida y te conviertas en el director imparable de tu destino."</em>
+              Soy experta en reprogramación mental y neurociencia aplicada. A través de mis programas he guíado a más de 1,000 personas a romper sus bloqueos, dejar de postergar y entrenar su mente para actuar a pesar del miedo. Mi propósito es acompañarte de forma cercana a tomar las riendas de tu vida con mayor conciencia y responsabilidad.
             </p>
           </div>
         </div>
@@ -515,40 +493,24 @@ export default function Mentoria() {
           <div className="faq-accordion-box">
             {[
               {
-                q: "¿Necesito experiencia previa para unirme a la mentoría?",
-                a: "No. Está diseñada para cualquier persona que quiera romper bloqueos y avanzar, incluso si nunca ha trabajado en su desarrollo personal."
+                q: "¿Cuánto tiempo debo dedicarle diariamente?",
+                a: "Recomiendo invertir 60 minutos diarios durante los 5 días para aprovechar al máximo la experiencia y participar activamente."
               },
               {
-                q: "¿Cuánto tiempo debo dedicarle?",
-                a: "Recomiendo invertir 60 minutos diarios durante los 5 días para aprovechar al máximo la experiencia y participar activamente en el taller en vivo."
+                q: "¿Cómo recibiré el contenido y el acompañamiento?",
+                a: "Todo se entrega de forma digital: audios y guía diaria por WhatsApp, junto con acceso a la comunidad privada."
               },
               {
-                q: "¿Recibiré materiales o apoyo adicional?",
-                a: "Sí. Tendrás audios enviados por WhatsApp, ejercicios prácticos y acceso a un grupo privado donde podrás resolver dudas y recibir motivación diaria."
+                q: "¿Necesito experiencia previa en desarrollo personal?",
+                a: "No. Está diseñada para cualquier persona que quiera romper bloqueos y avanzar, sin importar si es su primera vez haciendo esto."
               },
               {
-                q: "¿Cómo recibiré el contenido?",
-                a: "Todo se entrega de forma digital: audios por WhatsApp, guías en PDF y material práctico descargable."
+                q: "¿Qué pasa si no puedo asistir a las sesiones en vivo?",
+                a: "Las sesiones y el material quedarán grabados y tendrás acceso para repasarlos durante el tiempo asignado."
               },
               {
-                q: "¿Cuánto dura la mentoría?",
-                a: "La mentoría dura 5 días intensivos y tendrás acceso al material durante 3 meses para que lo repases y consolides lo aprendido."
-              },
-              {
-                q: "¿Cinco días es suficiente para pasar del miedo a la acción?",
-                a: "Sí, porque trabajaremos de forma enfocada e intensiva. En solo 5 días tendrás herramientas prácticas para tomar decisiones, actuar con seguridad y dejar de quedarte paralizado(a) por el miedo."
-              },
-              {
-                q: "¿Puedo hacer preguntas o recibir apoyo durante el programa?",
-                a: "Claro. Estaré disponible para resolver tus dudas y acompañarte en el grupo privado de WhatsApp."
-              },
-              {
-                q: "¿Y si no me funciona?",
-                a: "Tienes 7 días de garantía oficial desde tu inscripción para solicitar el reembolso del 100% si sientes que la mentoría no es para ti."
-              },
-              {
-                q: "¿Qué pasa si no puedo iniciar en la fecha indicada?",
-                a: "Podrás unirte a la próxima edición sin costo adicional."
+                q: "¿Tiene alguna garantía?",
+                a: "Sí. Tienes 7 días de garantía oficial desde tu inscripción para solicitar el reembolso del 100% de tu dinero si sientes que la mentoría no es para ti."
               }
             ].map((faq, idx) => (
               <div key={idx} className={`faq-row-item ${activeFaq === idx ? "active" : ""}`}>
@@ -571,7 +533,7 @@ export default function Mentoria() {
       {/* FOR WHOM IT IS NOT */}
       <section className="no-es-para-ti-reloaded">
         <div className="no-banner-magenta">
-          <h2>⛔ PARA QUIÉN NO ES ESTA MENTORÍA</h2>
+          <h2>⛔ PARA QUIÊN NO ES ESTA MENTORÍA</h2>
         </div>
         <div className="container container-large">
           <div className="no-content-grid">
