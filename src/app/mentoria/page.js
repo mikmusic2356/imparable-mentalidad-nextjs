@@ -4,21 +4,7 @@ import { useState, useEffect } from "react";
 import "./mentoria.css";
 
 export default function Mentoria() {
-  // 1. Timer State (24 hours demo: 86400 seconds)
-  const [timer, setTimer] = useState(86400);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTimer((prev) => (prev > 0 ? prev - 1 : 86400));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const hours = Math.floor(timer / 3600);
-  const minutes = Math.floor((timer % 3600) / 60);
-  const seconds = timer % 60;
-
-  const formatTime = (time) => (time < 10 ? `0${time}` : time);
+  // Timer removed - countdown replaced with urgency message
 
   // 2. Vimeo API Hook for seeking restriction
   useEffect(() => {
@@ -89,7 +75,18 @@ export default function Mentoria() {
             margin: "20px auto 40px auto", 
             fontWeight: "500" 
           }}>
-            Cinco días para dejar de repetir la misma historia y empezar a actuar con responsabilidad hacia la vida que realmente deseas construir.
+            Cinco días de entrenamiento mental para dejar de reaccionar en automático y empezar a dirigir tu vida con conciencia.
+          </p>
+          <p style={{
+            fontSize: "1.1rem",
+            lineHeight: "1.6",
+            color: "#0a1f44",
+            maxWidth: "850px",
+            margin: "-20px auto 40px auto",
+            fontWeight: "500",
+            fontStyle: "italic"
+          }}>
+            La experiencia de entrada al Método Imparable®.
           </p>
 
           {/* VIMEO VIDEO CONTAINER */}
@@ -171,20 +168,15 @@ export default function Mentoria() {
           </p>
 
           <div className="timer-box">
-            <h3>⏰ ÚLTIMOS DÍAS PARA UNIRTE ⏰</h3>
-            <div className="countdown-clock">
-              <div className="time-item"><span>{formatTime(hours)}</span><small>Horas</small></div>
-              <div className="time-sep">:</div>
-              <div className="time-item"><span>{formatTime(minutes)}</span><small>Minutos</small></div>
-              <div className="time-sep">:</div>
-              <div className="time-item"><span>{formatTime(seconds)}</span><small>Segundos</small></div>
-            </div>
-            <p className="timer-warning">👉 Cuando este contador llegue a cero «0» se cierran las inscripciones</p>
+            <p style={{ fontSize: "1.2rem", color: "#fcf9f8", lineHeight: "1.6", margin: "0" }}>
+              Los cupos son limitados porque la mentoría incluye acompañamiento directo durante los cinco días.
+            </p>
           </div>
 
           <div className="social-proof">
-            <h2 className="big-numbers">98 PERSONAS DE 100</h2>
-            <p>Han comprado el curso</p>
+            <h2 className="big-numbers animate-pulse-urgency" style={{ textTransform: "none", fontSize: "clamp(1.8rem, 7vw, 3.5rem)", margin: "20px auto", maxWidth: "90%" }}>
+              ¡CUPOS LIMITADOS!
+            </h2>
             <p className="last-chance">👉 Si estás leyendo esto y el botón aún está activo... es porque todavía estás a tiempo.</p>
           </div>
 
@@ -207,14 +199,17 @@ export default function Mentoria() {
       {/* 5. PRESENTACIÓN DE LA MENTORÍA */}
       <section className="mentorship-header">
         <div className="container">
-          <h2 className="section-title-white"><span className="target-icon">🎯</span> ¿QUÉ ES DEL MIEDO A LA ACCIÓN®?</h2>
+          <h2 className="section-title-white"><span className="target-icon">🎯</span> ¿Qué es Del Miedo a la Acción?</h2>
         </div>
       </section>
 
       <section className="urgency-section" style={{ padding: "60px 0", borderBottom: "5px solid #e91e63" }}>
         <div className="container" style={{ maxWidth: "800px", textAlign: "left" }}>
-          <p style={{ fontSize: "1.25rem", lineHeight: "1.7", marginBottom: "40px", color: "#ffffff", textAlign: "center" }}>
-            Del Miedo a la Acción® es una mentoría grupal de cinco días diseñada para ayudarte a reconocer los patrones que hoy gobiernan tu mente y comenzar a actuar con mayor conciencia, responsabilidad y paz.
+          <p style={{ fontSize: "1.25rem", lineHeight: "1.7", marginBottom: "20px", color: "#ffffff", textAlign: "center" }}>
+            Es la experiencia de entrada al Método Imparable®, un sistema de entrenamiento mental diseñado para ayudarte a dejar de vivir en piloto automático y comenzar a gobernar tu mente con mayor conciencia.
+          </p>
+          <p style={{ fontSize: "1.15rem", lineHeight: "1.7", marginBottom: "40px", color: "#fcf9f8", textAlign: "center" }}>
+            Durante cinco días vivirás una experiencia práctica que te permitirá reconocer los patrones que hoy dirigen tus decisiones y comenzar a reemplazarlos por respuestas más conscientes.
           </p>
 
           <div style={{ 
@@ -252,7 +247,7 @@ export default function Mentoria() {
             </div>
             <div className="benefit-item">
               <div className="icon-circle">🧘</div>
-              <p style={{ color: "#0a1f44", fontWeight: "700" }}>Gestionar mejor tus emociones.</p>
+              <p style={{ color: "#0a1f44", fontWeight: "700" }}>Responder con mayor conciencia antes de reaccionar por impulso.</p>
             </div>
             <div className="benefit-item">
               <div className="icon-circle">💡</div>
@@ -276,11 +271,10 @@ export default function Mentoria() {
             🚀 <strong>Activa tu mentalidad imparable hoy:</strong> desbloquea los bonos de lanzamiento antes de que desaparezcan. No es suerte, es decisión.
           </div>
 
-          <div className="countdown-clock-exact">
-            <div className="time-box-ex"><span>00</span><small>Days</small></div>
-            <div className="time-box-ex"><span>{formatTime(hours)}</span><small>Hours</small></div>
-            <div className="time-box-ex"><span>{formatTime(minutes)}</span><small>Minutes</small></div>
-            <div className="time-box-ex"><span>{formatTime(seconds)}</span><small>Seconds</small></div>
+          <div style={{ margin: "20px auto", maxWidth: "680px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "8px", padding: "20px 30px", textAlign: "center" }}>
+            <p style={{ fontSize: "1.2rem", color: "#fcf9f8", fontWeight: "600", margin: 0 }}>
+              ⚠️ Los cupos son limitados porque la mentoría incluye acompañamiento directo durante los cinco días.
+            </p>
           </div>
 
           <h2 className="why-me-title">¿POR QUÉ ELEGIRME?<br />PORQUE AQUÍ SÍ PASA ALGO DENTRO DE TI. 🚀</h2>
@@ -305,8 +299,8 @@ export default function Mentoria() {
                 <img src="/wp-content/uploads/2026/04/1-1.webp" alt="Ejercicios" />
               </div>
               <div className="bono-text-col">
-                <h3><span className="blue-num">2</span> BONO #2: EJERCICIOS PRÁCTICOS PARA REPROGRAMAR TU MENTE</h3>
-                <p>Técnicas fáciles y comprobadas que te ayudarán a eliminar pensamientos limitantes y a instalar nuevos patrones de poder.</p>
+                <h3><span className="blue-num">2</span> BONO #2: EJERCICIOS PRÁCTICOS PARA ENTRENAR NUEVOS PATRONES</h3>
+                <p>Ejercicios prácticos para entrenar nuevos patrones de pensamiento y acción.</p>
               </div>
             </div>
 
@@ -325,8 +319,8 @@ export default function Mentoria() {
                 <img src="/wp-content/uploads/2026/04/Diseno-sin-titulo-2.webp" alt="Sesion" />
               </div>
               <div className="bono-text-col">
-                <h3><span className="blue-num">4</span> BONO #4: SESIÓN GRUPAL EN VIVO DE CIERRE</h3>
-                <p>*Grupo privado con mentes en crecimiento<br />*Lives semanales exclusivos<br />*Soporte continuo entre sesiones</p>
+                <h3><span className="blue-num">4</span> BONO #4: GUÍA DE SEGUIMIENTO DE 21 DÍAS</h3>
+                <p>Un plan sencillo para ayudarte a mantener el entrenamiento mental una vez finalice la mentoría.</p>
               </div>
             </div>
           </div>
@@ -344,27 +338,20 @@ export default function Mentoria() {
       <section className="neurociencia-exacta">
         <div className="container container-large">
           <div className="neuro-grid">
+            {/* LEFT: Text column */}
             <div className="neuro-text-col">
               <span className="duly-name">DULY HERNANDEZ</span>
               <h2 style={{ textTransform: "none", fontSize: "2.2rem", color: "#0a1f44", marginBottom: "20px" }}>
-                ¿Qué significa vivir en piloto automático?
+                ¿Por qué te cuesta tanto cambiar, aunque realmente quieras hacerlo?
               </h2>
 
-              <p className="neuro-body">
-                Vivir en piloto automático significa que tu mente repite las mismas reacciones del pasado de manera subconsciente. Tomas decisiones basadas en el miedo y la evitación, creyendo que estás decidiendo libremente.
-              </p>
+              <h3 style={{ textTransform: "none", fontSize: "1.6rem", color: "#E91E63", marginTop: "15px", marginBottom: "10px", fontWeight: "700" }}>
+                La buena noticia es:
+              </h3>
 
-              <p className="neuro-body">
-                Aunque por fuera parece que tienes el control, tu cerebro está configurado para mantenerte en tu zona cómoda a toda costa. Por eso, a pesar de tus intenciones de cambiar, terminas repitiendo los mismos ciclos.
+              <p style={{ fontSize: "1.3rem", fontWeight: "600", color: "#0a1f44", marginBottom: "20px", lineHeight: "1.4" }}>
+                Quien gobierna su mente, gobierna su vida.
               </p>
-
-              <p className="neuro-body">
-                Salir de este estado no se logra buscando motivación externa o leyendo teoría. Requiere entrenar tu mente para identificar el patrón automático en el momento exacto en que ocurre y elegir una respuesta diferente y consciente.
-              </p>
-
-              <h2 style={{ textTransform: "none", fontSize: "2.2rem", color: "#E91E63", marginTop: "40px", marginBottom: "20px" }}>
-                La buena noticia es que tu mente puede entrenarse.
-              </h2>
 
               <p className="neuro-body">
                 Así como aprendiste a reaccionar con miedo o duda, puedes reprogramar tu cerebro. Los patrones mentales aprendidos también pueden modificarse mediante entrenamiento consciente.
@@ -372,17 +359,18 @@ export default function Mentoria() {
 
               <div className="payment-area-small">
                 <img src="/wp-content/uploads/2026/04/METODOS-DE-PAGO-LP-1.png" alt="Pagos" style={{ maxWidth: "300px" }} />
-                <br /><br />
-                <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="cta-yellow-exact">
-                  QUIERO PASAR DEL MIEDO A LA ACCIÓN ✔️
-                </a>
               </div>
             </div>
 
+            {/* RIGHT: Image + CTA button */}
             <div className="neuro-img-col">
-              <div className="brain-card">
-                <img src="/wp-content/uploads/2026/04/OIP-3.webp" alt="Escaneo Cerebral" />
-                <p className="brain-caption">Las imágenes muestran las áreas cerebrales que se activan durante el aprendizaje del miedo (miedo condicionado): corteza cingulada anterior dorsal (1), ínsula anterior (2), corteza prefrontal dorsolateral (3), región dorsal del tronco craneoencefálico (4), precúneo dorsal (5), hipotálamo (6), corteza somatosensorial (7), corteza suplementaria motora (8), tálamo (9) y estriado ventral (10).</p>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "25px" }}>
+                <div style={{ borderRadius: "12px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.18)", width: "100%" }}>
+                  <img src="/piloto-automatico.jpg" alt="¿Por qué te cuesta tanto cambiar?" style={{ width: "100%", height: "auto", display: "block" }} />
+                </div>
+                <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="cta-yellow-exact" style={{ width: "100%", textAlign: "center", display: "block" }}>
+                  QUIERO PASAR DEL MIEDO A LA ACCIÓN ✔️
+                </a>
               </div>
             </div>
           </div>
@@ -398,8 +386,8 @@ export default function Mentoria() {
             <p className="t-line-2">Sino porque tu mente seguirá protegiéndote del cambio.</p>
 
             <div className="tension-bridge">
-              <p>Las personas que avanzan no tienen menos miedo.</p>
-              <p>Tienen <span className="highlight-yellow">entrenamiento mental</span> para actuar a pesar de él.</p>
+              <p>Las personas que transforman su vida no esperan dejar de sentir miedo.</p>
+              <p>Aprenden a <span className="highlight-yellow">decidir a pesar de él.</span></p>
             </div>
 
             <p className="tension-final">Y eso es exactamente lo que vas a desarrollar en esta mentoría.</p>
@@ -419,14 +407,23 @@ export default function Mentoria() {
               <h2 className="launch-price-title" style={{ fontSize: "2.3rem", textTransform: "none", color: "#0a1f44", marginBottom: "10px" }}>
                 Mentoría Del Miedo a la Acción®
               </h2>
-              
-              <div style={{ fontSize: "3rem", fontWeight: "900", color: "#E91E63", margin: "20px 0" }}>
+
+              <p style={{ color: "#888", fontSize: "1.1rem", textDecoration: "line-through", margin: "10px 0 0 0" }}>
+                Valor total: $197 USD
+              </p>
+              <div style={{ fontSize: "3rem", fontWeight: "900", color: "#E91E63", margin: "10px 0" }}>
                 $44,83 USD
               </div>
+              <p style={{ fontSize: "1.05rem", lineHeight: "1.6", color: "#0a1f44", maxWidth: "420px", margin: "0 0 10px 0" }}>
+                Hoy no estás comprando cinco días de mentoría. Estás dando el primer paso para entrenar una mente que deje de gobernarse por el miedo.
+              </p>
 
-              <div className="final-cta-box" style={{ marginTop: "30px" }}>
+              <p style={{ fontSize: "1.0rem", lineHeight: "1.6", color: "#555", maxWidth: "420px", margin: "0 0 20px 0", fontStyle: "italic" }}>
+                Hoy no estás comprando solamente una mentoría. Estás dando el primer paso dentro del Método Imparable®, un sistema de entrenamiento diseñado para ayudarte a gobernar tu mente y construir una vida dirigida por tus decisiones, no por tus automatismos.
+              </p>
+              <div className="final-cta-box" style={{ marginTop: "10px" }}>
                 <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="btn-buy-final">
-                  ¡COMPRAR AHORA! ✔️
+                  ¡QUIERO EMPEZAR MI ENTRENAMIENTO! ✔️
                 </a>
               </div>
             </div>
@@ -481,6 +478,16 @@ export default function Mentoria() {
             <p className="bio-description">
               Soy experta en reprogramación mental y neurociencia aplicada. A través de mis programas he guíado a más de 1,000 personas a romper sus bloqueos, dejar de postergar y entrenar su mente para actuar a pesar del miedo. Mi propósito es acompañarte de forma cercana a tomar las riendas de tu vida con mayor conciencia y responsabilidad.
             </p>
+            <div style={{ marginTop: "30px", padding: "35px", background: "#0a1f44", borderRadius: "12px", color: "#fcf9f8", textAlign: "left", boxShadow: "0 15px 35px rgba(10, 31, 68, 0.15)" }}>
+              <p style={{ fontSize: "1.25rem", fontWeight: "700", marginBottom: "15px" }}>Hoy tienes dos opciones.</p>
+              <p style={{ fontSize: "1.1rem", marginBottom: "15px", fontStyle: "italic", opacity: 0.9 }}>Seguir dejando que tus patrones decidan por ti...</p>
+              <p style={{ fontSize: "1.1rem", marginBottom: "20px", opacity: 0.9 }}>o comenzar el entrenamiento que puede cambiar la forma en que diriges tu vida.</p>
+              <p style={{ fontSize: "1.15rem", fontWeight: "700", marginBottom: "5px" }}>Bienvenido al Método Imparable®.</p>
+              <p style={{ fontSize: "1.1rem", fontStyle: "italic", marginBottom: "25px", color: "#E91E63", fontWeight: "600" }}>Quien gobierna su mente, gobierna su vida.</p>
+              <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="cta-yellow-exact" style={{ display: "inline-block", width: "auto", padding: "12px 25px", fontSize: "1.1rem" }}>
+                🔘 QUIERO EMPEZAR MI ENTRENAMIENTO
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -533,7 +540,7 @@ export default function Mentoria() {
       {/* FOR WHOM IT IS NOT */}
       <section className="no-es-para-ti-reloaded">
         <div className="no-banner-magenta">
-          <h2>⛔ PARA QUIÊN NO ES ESTA MENTORÍA</h2>
+          <h2>🚫 Esta mentoría NO es para ti si...</h2>
         </div>
         <div className="container container-large">
           <div className="no-content-grid">
@@ -542,16 +549,16 @@ export default function Mentoria() {
             </div>
             <div className="no-info-col">
               <div className="no-item-box">
-                <span className="bad-icon">🚫</span>
-                <p><strong>Quienes no quieran comprometerse 100%.</strong><br />La transformación requiere energía y presencia absoluta.</p>
+                <span className="bad-icon">❌</span>
+                <p><strong>Buscas una solución mágica sin hacer cambios.</strong><br />Aquí no vendemos motivación pasajera. Entrenamos tu mente para que aprendas a actuar de forma diferente.</p>
               </div>
               <div className="no-item-box">
-                <span className="bad-icon">🚫</span>
-                <p><strong>Quienes esperan resultados sin acción.</strong><br />La motivación sola es humo; aquí venimos a trabajar de verdad.</p>
+                <span className="bad-icon">❌</span>
+                <p><strong>No estás dispuesto(a) a asumir responsabilidad por tu proceso.</strong><br />Nadie puede gobernar tu mente por ti. El cambio comienza cuando decides hacerte cargo de tu vida.</p>
               </div>
               <div className="no-item-box">
-                <span className="bad-icon">🚫</span>
-                <p><strong>Quienes no estén dispuestos a enfrentar miedos.</strong><br />Solo quienes cruzan la barrera del miedo logran la libertad.</p>
+                <span className="bad-icon">❌</span>
+                <p><strong>Prefieres seguir esperando el momento perfecto.</strong><br />Si esperas sentirte completamente seguro para actuar, probablemente seguirás en el mismo lugar. Aquí aprenderás a avanzar incluso cuando exista miedo.</p>
               </div>
             </div>
           </div>
@@ -561,31 +568,64 @@ export default function Mentoria() {
       {/* RISK FREE WARRANTY */}
       <section className="garantia-zona">
         <div className="garantia-banner-yellow">
-          <h2>GARANTÍA SIN RIESGO</h2>
+          <h2>🛡️ GARANTÍA IMPARABLE</h2>
         </div>
         <div className="container container-medium">
           <div className="shield-icon-box">
-            <div className="shield-circle">✔️</div>
+            <div className="shield-circle">🛡️</div>
           </div>
           <p className="garantia-text">
-            Queremos que tomes esta <strong>mentoría con total seguridad</strong>. Si en los <strong>primeros 7 días desde tu inscripción</strong> —y dentro de las primeras 72 horas de haber iniciado el taller— sientes que no es para ti, te <strong>devolvemos el 100% de tu inversión</strong>, sin preguntas. Lo importante es que <strong>comiences solo si realmente sientes que este es tu momento.</strong>
+            Queremos que tomes esta mentoría con total tranquilidad.
           </p>
+          <p className="garantia-text">
+            Si durante los primeros <strong>7 días desde tu inscripción</strong> y dentro de las primeras <strong>72 horas de haber iniciado la mentoría</strong> sientes que esta experiencia no era lo que esperabas, te devolveremos el <strong>100% de tu inversión</strong>.
+          </p>
+          <p className="garantia-text">Sin complicaciones. Sin preguntas innecesarias.</p>
+          <p className="garantia-text">Nuestro propósito no es que compres una mentoría.</p>
         </div>
       </section>
 
       {/* FINAL AREA AND CTA */}
       <section className="final-cta-area">
         <div className="container">
-          <h2 className="final-headline">Ya lo sabes: el miedo no es tu enemigo, es tu programación</h2>
-          <p className="final-subheadline">Y LAS PROGRAMACIONES SE PUEDEN REENTRENAR</p>
+          <h2 className="final-headline" style={{ textTransform: "none", marginBottom: "10px" }}>Hoy tienes dos opciones</h2>
+          
+          <div className="comparison-box-container">
+            {/* Opción A */}
+            <div className="comparison-card muted-option">
+              <span className="card-badge">❌ RUTINA AUTOMÁTICA</span>
+              <div style={{ marginTop: "15px" }}>
+                <h4 style={{ textTransform: "none", color: "#fff", fontWeight: "bold" }}>Opción A: Seguir igual</h4>
+                <p style={{ margin: "10px 0" }}>Seguir dejando que tus patrones decidan por ti en tu día a día...</p>
+              </div>
+              <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "15px", fontSize: "0.9rem", color: "#888", fontWeight: "600" }}>
+                Permaneces en el mismo lugar de siempre.
+              </div>
+            </div>
+
+            {/* Opción B */}
+            <div className="comparison-card highlight-option">
+              <span className="card-badge">🔥 DECISIÓN IMPARABLE</span>
+              <div style={{ marginTop: "15px" }}>
+                <h4 style={{ textTransform: "none", color: "#E91E63", fontWeight: "bold" }}>Opción B: Entrenar tu mente</h4>
+                <p style={{ margin: "10px 0" }}>Comenzar el entrenamiento que puede cambiar de raíz la forma en que decides y diriges tu vida.</p>
+              </div>
+              <div style={{ borderTop: "1px solid rgba(233,30,99,0.2)", paddingTop: "15px", fontSize: "0.9rem", color: "#E91E63", fontWeight: "700" }}>
+                Tomas el control consciente de tu vida.
+              </div>
+            </div>
+          </div>
+
+          <p style={{ fontSize: "1.3rem", fontWeight: "700", color: "#fcf9f8", margin: "30px 0 5px 0" }}>Bienvenido al Método Imparable®.</p>
+          <p style={{ fontSize: "1.2rem", color: "#E91E63", fontStyle: "italic", marginBottom: "30px" }}>Quien gobierna su mente, gobierna su vida.</p>
 
           <div className="final-button-box">
             <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="btn-yellow-huge">
-              QUIERO PASAR DEL MIEDO A LA ACCIÓN ✔️
+              🔘 QUIERO EMPEZAR MI ENTRENAMIENTO
             </a>
           </div>
 
-          <p className="final-last-warning">Cada día que postergas, tu mente fortalece el miedo. hoy puedes cambiarlo</p>
+          <p className="final-last-warning">Cada día que postergas, tu mente fortalece el miedo. Hoy puedes cambiarlo.</p>
 
           {showPrivacy && (
             <div className="privacy-notice-box">

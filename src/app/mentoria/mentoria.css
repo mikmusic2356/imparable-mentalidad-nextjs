@@ -1359,3 +1359,222 @@
         gap: 10px !important;
     }
 }
+
+/* ADDED STYLES FOR ANIMATED LIMITADOS & COMPARISON */
+@keyframes pulse-urgency {
+    0% { transform: scale(1); text-shadow: 0 0 10px rgba(233,30,99,0.2); }
+    50% { transform: scale(1.08); text-shadow: 0 0 25px rgba(233,30,99,0.8); }
+    100% { transform: scale(1); text-shadow: 0 0 10px rgba(233,30,99,0.2); }
+}
+
+.animate-pulse-urgency {
+    animation: pulse-urgency 1.6s infinite ease-in-out !important;
+    display: inline-block !important;
+    color: #e91e63 !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+}
+
+@keyframes card-pulse-glow {
+    0% {
+        box-shadow: 0 10px 30px rgba(233, 30, 99, 0.2) !important;
+        border-color: #E91E63 !important;
+        transform: scale(1.03) !important;
+    }
+    50% {
+        box-shadow: 0 25px 60px rgba(233, 30, 99, 0.45) !important;
+        border-color: #D4FF00 !important;
+        transform: scale(1.06) !important;
+    }
+}
+/* PREMIUM VISUAL COMPARISON CARDS (PINK THEME) */
+.comparison-box-container {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    margin: 40px auto !important;
+    max-width: 950px !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+}
+
+.comparison-card {
+    flex: 1 !important;
+    min-width: 290px !important;
+    max-width: 440px !important;
+    padding: 40px 30px !important;
+    border-radius: 18px !important;
+    background: rgba(10, 31, 68, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    overflow: hidden !important;
+    text-align: left !important;
+}
+
+.comparison-card.muted-option {
+    border-top: 5px solid #555 !important;
+    opacity: 0.6 !important;
+}
+
+.comparison-card.muted-option:hover {
+    opacity: 0.85 !important;
+    transform: translateY(-6px) !important;
+    border-color: rgba(255,255,255,0.2) !important;
+}
+
+@keyframes card-pulse-pink {
+    0% {
+        box-shadow: 0 10px 30px rgba(233, 30, 99, 0.15) !important;
+        transform: scale(1.02) !important;
+    }
+    100% {
+        box-shadow: 0 25px 55px rgba(233, 30, 99, 0.35) !important;
+        transform: scale(1.04) !important;
+    }
+}
+
+.comparison-card.highlight-option {
+    border: 1.5px solid rgba(233, 30, 99, 0.4) !important;
+    border-top: 6px solid #E91E63 !important;
+    background: rgba(233, 30, 99, 0.06) !important;
+    opacity: 1 !important;
+    animation: card-pulse-pink 2s infinite alternate ease-in-out !important;
+}
+
+.comparison-card.highlight-option:hover {
+    animation-play-state: paused !important;
+    transform: scale(1.06) translateY(-6px) !important;
+    box-shadow: 0 30px 65px rgba(233, 30, 99, 0.5) !important;
+    border-color: #E91E63 !important;
+}
+
+.card-badge {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.muted-option .card-badge {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #bbb !important;
+}
+
+.highlight-option .card-badge {
+    background: #E91E63 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3) !important;
+}
+
+.comparison-card h4 {
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 12px !important;
+    margin-top: 10px !important;
+}
+
+.comparison-card p {
+    font-size: 1.05rem !important;
+    line-height: 1.55 !important;
+    color: rgba(252, 249, 248, 0.85) !important;
+    margin-bottom: 20px !important;
+}
+
+@media (max-width: 768px) {
+    .comparison-box-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
+    }
+    .comparison-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .comparison-card.highlight-option {
+        animation: none !important;
+        transform: scale(1.02) !important;
+    }
+    .comparison-card.highlight-option:hover {
+        transform: scale(1.03) !important;
+    }
+}
+
+/* GLOBAL RESPONSIVE FIXES TO PREVENT HORIZONTAL SCROLLING/OVERFLOW */
+.mentoria-page-container {
+    overflow-x: hidden !important;
+    width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .mentoria-page-container {
+        width: 100vw !important;
+    }
+    .mentoria-page-container .urgency-section .big-numbers {
+        font-size: 2.2rem !important;
+        margin: 15px auto !important;
+        line-height: 1.2 !important;
+    }
+    .mentoria-page-container .container,
+    .mentoria-page-container .container-large,
+    .mentoria-page-container .container-medium,
+    .mentoria-page-container section {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .mentoria-page-container img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .mentoria-page-container h1 {
+        font-size: 1.9rem !important;
+        line-height: 1.25 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    .mentoria-page-container h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.25 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    .mentoria-page-container h3 {
+        font-size: 1.25rem !important;
+        line-height: 1.25 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    .mentoria-page-container p, 
+    .mentoria-page-container span, 
+    .mentoria-page-container li {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    /* Fix potential padding overflows on containers */
+    .mentoria-page-container div, 
+    .mentoria-page-container section, 
+    .mentoria-page-container ul, 
+    .mentoria-page-container li {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+
+
