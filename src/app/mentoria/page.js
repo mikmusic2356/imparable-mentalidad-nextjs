@@ -164,7 +164,7 @@ export default function Mentoria() {
             margin: "20px auto 45px auto",
             lineHeight: "1.4"
           }}>
-            Probablemente no te falte fuerza de voluntad. Estás viviendo en piloto automático.
+            No te falta fuerza de voluntad. Lo que te ha faltado es un entrenamiento para gobernar tu mente.
           </p>
 
           <div className="timer-box">
@@ -187,7 +187,7 @@ export default function Mentoria() {
           </div>
 
           <div className="payment-strip" style={{ marginBottom: "20px", background: "transparent", boxShadow: "none" }}>
-            <img src="/wp-content/uploads/2026/04/METODOS-DE-PAGO-LP-1.png" alt="Métodos de Pago" style={{ maxWidth: "100%", height: "auto" }} />
+            <img src="/wp-content/uploads/2026/04/METODOS-DE-PAGO-LP-1.webp" alt="Métodos de Pago" style={{ maxWidth: "100%", height: "auto" }} />
           </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
@@ -336,43 +336,36 @@ export default function Mentoria() {
 
       {/* NEUROSCIENCE SECTION */}
       <section className="neurociencia-exacta">
-        <div className="container container-large">
-          <div className="neuro-grid">
-            {/* LEFT: Text column */}
-            <div className="neuro-text-col">
-              <span className="duly-name">DULY HERNANDEZ</span>
-              <h2 style={{ textTransform: "none", fontSize: "2.2rem", color: "#0a1f44", marginBottom: "20px" }}>
-                ¿Por qué te cuesta tanto cambiar, aunque realmente quieras hacerlo?
-              </h2>
+        <div className="container" style={{ maxWidth: "750px", textAlign: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "25px" }}>
+            {/* 1. Imagen */}
+            <div style={{ borderRadius: "12px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.18)", width: "100%", maxWidth: "600px" }}>
+              <img src="/piloto-automatico.webp" alt="Entrenamiento mental" style={{ width: "100%", height: "auto", display: "block" }} />
+            </div>
 
-              <h3 style={{ textTransform: "none", fontSize: "1.6rem", color: "#E91E63", marginTop: "15px", marginBottom: "10px", fontWeight: "700" }}>
+            {/* 2. La buena noticia es */}
+            <div style={{ maxWidth: "650px", margin: "10px auto 0 auto" }}>
+              <h3 style={{ textTransform: "none", fontSize: "1.8rem", color: "#E91E63", marginBottom: "10px", fontWeight: "700" }}>
                 La buena noticia es:
               </h3>
 
-              <p style={{ fontSize: "1.3rem", fontWeight: "600", color: "#0a1f44", marginBottom: "20px", lineHeight: "1.4" }}>
+              <p style={{ fontSize: "1.3rem", fontWeight: "600", color: "#0a1f44", marginBottom: "15px", lineHeight: "1.4" }}>
                 Quien gobierna su mente, gobierna su vida.
               </p>
 
-              <p className="neuro-body">
+              <p className="neuro-body" style={{ fontSize: "1.1rem", lineHeight: "1.6", color: "#444", marginBottom: "20px" }}>
                 Así como aprendiste a reaccionar con miedo o duda, puedes reprogramar tu cerebro. Los patrones mentales aprendidos también pueden modificarse mediante entrenamiento consciente.
               </p>
 
-              <div className="payment-area-small">
-                <img src="/wp-content/uploads/2026/04/METODOS-DE-PAGO-LP-1.png" alt="Pagos" style={{ maxWidth: "300px" }} />
+              <div className="payment-area-small" style={{ marginBottom: "10px" }}>
+                <img src="/wp-content/uploads/2026/04/METODOS-DE-PAGO-LP-1.webp" alt="Pagos" style={{ maxWidth: "300px", margin: "0 auto" }} />
               </div>
             </div>
 
-            {/* RIGHT: Image + CTA button */}
-            <div className="neuro-img-col">
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "25px" }}>
-                <div style={{ borderRadius: "12px", overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.18)", width: "100%" }}>
-                  <img src="/piloto-automatico.jpg" alt="¿Por qué te cuesta tanto cambiar?" style={{ width: "100%", height: "auto", display: "block" }} />
-                </div>
-                <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="cta-yellow-exact" style={{ width: "100%", textAlign: "center", display: "block" }}>
-                  QUIERO PASAR DEL MIEDO A LA ACCIÓN ✔️
-                </a>
-              </div>
-            </div>
+            {/* 3. Botón */}
+            <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="cta-yellow-exact" style={{ maxWidth: "500px", width: "100%", textAlign: "center", display: "block" }}>
+              QUIERO PASAR DEL MIEDO A LA ACCIÓN ✔️
+            </a>
           </div>
         </div>
       </section>
@@ -408,20 +401,18 @@ export default function Mentoria() {
                 Mentoría Del Miedo a la Acción®
               </h2>
 
+              <p style={{ fontSize: "1.0rem", lineHeight: "1.6", color: "#555", maxWidth: "420px", margin: "15px 0 15px 0", fontStyle: "italic" }}>
+                Hoy no estás comprando solamente una mentoría. Estás dando el primer paso dentro del Método Imparable®, un sistema de entrenamiento diseñado para ayudarte a gobernar tu mente y construir una vida dirigida por tus decisiones, no por tus automatismos.
+              </p>
+
               <p style={{ color: "#888", fontSize: "1.1rem", textDecoration: "line-through", margin: "10px 0 0 0" }}>
                 Valor total: $197 USD
               </p>
               <div style={{ fontSize: "3rem", fontWeight: "900", color: "#E91E63", margin: "10px 0" }}>
                 $44,83 USD
               </div>
-              <p style={{ fontSize: "1.05rem", lineHeight: "1.6", color: "#0a1f44", maxWidth: "420px", margin: "0 0 10px 0" }}>
-                Hoy no estás comprando cinco días de mentoría. Estás dando el primer paso para entrenar una mente que deje de gobernarse por el miedo.
-              </p>
 
-              <p style={{ fontSize: "1.0rem", lineHeight: "1.6", color: "#555", maxWidth: "420px", margin: "0 0 20px 0", fontStyle: "italic" }}>
-                Hoy no estás comprando solamente una mentoría. Estás dando el primer paso dentro del Método Imparable®, un sistema de entrenamiento diseñado para ayudarte a gobernar tu mente y construir una vida dirigida por tus decisiones, no por tus automatismos.
-              </p>
-              <div className="final-cta-box" style={{ marginTop: "10px" }}>
+              <div className="final-cta-box" style={{ marginTop: "15px" }}>
                 <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="btn-buy-final">
                   ¡QUIERO EMPEZAR MI ENTRENAMIENTO! ✔️
                 </a>

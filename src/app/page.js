@@ -224,28 +224,12 @@ export default function Home() {
           {stage === "result" && (
             <div id="quiz-content">
               <div className={`result-container ${fadeClass}`}>
-                <div style={{
-                  padding: "56.25% 0 0 0",
-                  position: "relative",
-                  width: "100%",
-                  maxWidth: "800px",
-                  margin: "0 auto 30px auto",
-                  borderRadius: "8px",
-                  overflow: "hidden",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.5)"
-                }}>
+                <div className="video-wrapper">
                   <iframe 
-                    src="https://player.vimeo.com/video/1107914366?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                    frameBorder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture" 
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%"
-                    }} 
-                    title="Video de diagnóstico"
+                    src="https://drive.google.com/file/d/1M6RQCdCPMxOZV2K72Ok2IIz8XCqIBr-m/preview" 
+                    allow="autoplay; fullscreen" 
+                    allowFullScreen
+                    title="Video de llamado a la acción"
                   ></iframe>
                 </div>
                 
