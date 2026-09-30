@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./onboarding.css";
 
 const questions = [
@@ -88,6 +88,7 @@ export default function Home() {
   const [stage, setStage] = useState("quiz"); // quiz, loading, result
   const [highestProfile, setHighestProfile] = useState("sobrecarga");
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoRef = useRef(null);
 
   const progress = (currentStep / questions.length) * 100;
 
@@ -226,10 +227,34 @@ export default function Home() {
             <div id="quiz-content">
               <div className={`result-container ${fadeClass}`}>
                 <div className="video-wrapper">
-                  {!isVideoPlaying ? (
+                  <video
+                    ref={videoRef}
+                    src="/video-onboarding.mp4"
+                    poster="/miniatura-duly.jpeg"
+                    controls={isVideoPlaying}
+                    playsInline
+                    preload="metadata"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      objectFit: "cover",
+                      borderRadius: "12px"
+                    }}
+                    onPlay={() => setIsVideoPlaying(true)}
+                    onPause={() => setIsVideoPlaying(false)}
+                  />
+                  {!isVideoPlaying && (
                     <div 
                       className="video-thumbnail-container" 
-                      onClick={() => setIsVideoPlaying(true)}
+                      onClick={() => {
+                        setIsVideoPlaying(true);
+                        if (videoRef.current) {
+                          videoRef.current.play();
+                        }
+                      }}
                     >
                       <img 
                         src="/miniatura-duly.jpeg" 
@@ -240,13 +265,6 @@ export default function Home() {
                         <div className="video-play-icon"></div>
                       </div>
                     </div>
-                  ) : (
-                    <iframe 
-                      src="https://drive.google.com/file/d/1M6RQCdCPMxOZV2K72Ok2IIz8XCqIBr-m/preview" 
-                      allow="autoplay; fullscreen" 
-                      allowFullScreen
-                      title="Video de llamado a la acción"
-                    ></iframe>
                   )}
                 </div>
                 
