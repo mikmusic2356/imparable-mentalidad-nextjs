@@ -87,6 +87,7 @@ export default function Home() {
   const [fadeClass, setFadeClass] = useState("fadeIn");
   const [stage, setStage] = useState("quiz"); // quiz, loading, result
   const [highestProfile, setHighestProfile] = useState("sobrecarga");
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const progress = (currentStep / questions.length) * 100;
 
@@ -225,12 +226,28 @@ export default function Home() {
             <div id="quiz-content">
               <div className={`result-container ${fadeClass}`}>
                 <div className="video-wrapper">
-                  <iframe 
-                    src="https://drive.google.com/file/d/1M6RQCdCPMxOZV2K72Ok2IIz8XCqIBr-m/preview" 
-                    allow="autoplay; fullscreen" 
-                    allowFullScreen
-                    title="Video de llamado a la acción"
-                  ></iframe>
+                  {!isVideoPlaying ? (
+                    <div 
+                      className="video-thumbnail-container" 
+                      onClick={() => setIsVideoPlaying(true)}
+                    >
+                      <img 
+                        src="/miniatura-duly.jpeg" 
+                        alt="Miniatura de video" 
+                        className="video-thumbnail-img"
+                      />
+                      <div className="video-play-btn">
+                        <div className="video-play-icon"></div>
+                      </div>
+                    </div>
+                  ) : (
+                    <iframe 
+                      src="https://drive.google.com/file/d/1M6RQCdCPMxOZV2K72Ok2IIz8XCqIBr-m/preview" 
+                      allow="autoplay; fullscreen" 
+                      allowFullScreen
+                      title="Video de llamado a la acción"
+                    ></iframe>
+                  )}
                 </div>
                 
                 <div className="editorial-line">────────</div>
