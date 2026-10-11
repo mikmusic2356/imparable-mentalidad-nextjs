@@ -58,6 +58,9 @@ export default function Mentoria() {
   // 4. Privacy Notice Box state
   const [showPrivacy, setShowPrivacy] = useState(true);
 
+  // 5. Lightbox Modal state for testimonial captures
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="mentoria-page-container">
       {/* 1. HERO SECTION */}
@@ -167,20 +170,28 @@ export default function Mentoria() {
             No te falta fuerza de voluntad. Lo que te ha faltado es un entrenamiento para gobernar tu mente.
           </p>
 
-          <div className="timer-box">
-            <p style={{ fontSize: "1.2rem", color: "#fcf9f8", lineHeight: "1.6", margin: "0" }}>
-              Los cupos son limitados porque la mentoría incluye acompañamiento directo durante los cinco días.
-            </p>
-          </div>
-
           <div className="social-proof">
             <h2 className="big-numbers animate-pulse-urgency" style={{ textTransform: "none", fontSize: "clamp(1.8rem, 7vw, 3.5rem)", margin: "20px auto", maxWidth: "90%" }}>
-              ¡CUPOS LIMITADOS!
+              ¡EXTENDEMOS OFERTA!
             </h2>
             <p className="last-chance">👉 Si estás leyendo esto y el botón aún está activo... es porque todavía estás a tiempo.</p>
           </div>
 
-          <div style={{ marginTop: "30px" }}>
+          <div style={{
+            background: "rgba(255, 255, 255, 0.08)",
+            border: "1px solid rgba(255, 255, 255, 0.15)",
+            borderRadius: "8px",
+            padding: "20px 25px",
+            maxWidth: "700px",
+            margin: "25px auto 20px auto",
+            textAlign: "center"
+          }}>
+            <p style={{ fontSize: "1.15rem", color: "#fcf9f8", lineHeight: "1.6", margin: 0, fontWeight: "500" }}>
+              Grupos de 20 personas. Limito los cupos para poder leer y responder a cada participante dentro del grupo. El grupo empieza cuando se completan los 20 cupos. Entre antes te inscribas, antes empezamos.
+            </p>
+          </div>
+
+          <div style={{ marginTop: "20px" }}>
             <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="cta-yellow-btn">
               QUIERO PASAR DEL MIEDO A LA ACCIÓN
             </a>
@@ -269,12 +280,6 @@ export default function Mentoria() {
 
           <div className="yellow-bar">
             🚀 <strong>Activa tu mentalidad imparable hoy:</strong> desbloquea los bonos de lanzamiento antes de que desaparezcan. No es suerte, es decisión.
-          </div>
-
-          <div style={{ margin: "20px auto", maxWidth: "680px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "8px", padding: "20px 30px", textAlign: "center" }}>
-            <p style={{ fontSize: "1.2rem", color: "#fcf9f8", fontWeight: "600", margin: 0 }}>
-              ⚠️ Los cupos son limitados porque la mentoría incluye acompañamiento directo durante los cinco días.
-            </p>
           </div>
 
           <h2 className="why-me-title">¿POR QUÉ ELEGIRME?<br />PORQUE AQUÍ SÍ PASA ALGO DENTRO DE TI. 🚀</h2>
@@ -405,14 +410,40 @@ export default function Mentoria() {
                 Hoy no estás comprando solamente una mentoría. Estás dando el primer paso dentro del Método Imparable®, un sistema de entrenamiento diseñado para ayudarte a gobernar tu mente y construir una vida dirigida por tus decisiones, no por tus automatismos.
               </p>
 
-              <p style={{ color: "#888", fontSize: "1.1rem", textDecoration: "line-through", margin: "10px 0 0 0" }}>
-                Valor total: $197 USD
+              <div style={{ fontSize: "2.5rem", fontWeight: "900", color: "#E91E63", margin: "10px 0 5px 0" }}>
+                Inversión: $44,83 USD
+              </div>
+              <p style={{ fontSize: "1.2rem", fontWeight: "700", color: "#0a1f44", margin: "0 0 15px 0" }}>
+                Grupos de 20 personas.
               </p>
-              <div style={{ fontSize: "3rem", fontWeight: "900", color: "#E91E63", margin: "10px 0" }}>
-                $44,83 USD
+
+              <div style={{ margin: "15px 0 20px 0" }}>
+                <p style={{ fontSize: "1.1rem", fontWeight: "700", color: "#0a1f44", marginBottom: "10px" }}>
+                  Incluye:
+                </p>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  <li style={{ padding: "6px 0", fontSize: "1.05rem", color: "#333", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span style={{ color: "#E91E63", fontWeight: "bold" }}>✔</span> Acompañamiento diario en grupo por WhatsApp
+                  </li>
+                  <li style={{ padding: "6px 0", fontSize: "1.05rem", color: "#333", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span style={{ color: "#E91E63", fontWeight: "bold" }}>✔</span> Ejercicios prácticos
+                  </li>
+                  <li style={{ padding: "6px 0", fontSize: "1.05rem", color: "#333", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span style={{ color: "#E91E63", fontWeight: "bold" }}>✔</span> Comunidad privada
+                  </li>
+                  <li style={{ padding: "6px 0", fontSize: "1.05rem", color: "#333", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span style={{ color: "#E91E63", fontWeight: "bold" }}>✔</span> Encuentro final en vivo
+                  </li>
+                  <li style={{ padding: "6px 0", fontSize: "1.05rem", color: "#333", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span style={{ color: "#E91E63", fontWeight: "bold" }}>✔</span> Ebook &ldquo;Mentalidad Imparable&rdquo;
+                  </li>
+                  <li style={{ padding: "6px 0", fontSize: "1.05rem", color: "#333", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span style={{ color: "#E91E63", fontWeight: "bold" }}>✔</span> Guía de seguimiento de 21 días
+                  </li>
+                </ul>
               </div>
 
-              <div className="final-cta-box" style={{ marginTop: "15px" }}>
+              <div className="final-cta-box" style={{ marginTop: "20px" }}>
                 <a href="https://go.hotmart.com/C100717660P?dp=1" target="_blank" rel="noopener noreferrer" className="btn-buy-final">
                   ¡QUIERO EMPEZAR MI ENTRENAMIENTO! ✔️
                 </a>
@@ -425,33 +456,87 @@ export default function Mentoria() {
       {/* TESTIMONIOS */}
       <section className="testimonios-section">
         <div className="container">
-          <h2 className="testimonios-title">TESTIMONIOS REALES DE TRANSFORMACIÓN</h2>
+          <h2 className="testimonios-title">LO QUE DICEN QUIENES YA PASARON POR LA MENTORÍA</h2>
           <div className="testimonios-grid">
+            {/* Dignora */}
             <div className="testimonio-card">
-              <div className="testimonio-img-wrap">
-                <img src="/wp-content/uploads/2026/04/b3577990-3c03-4ccf-8eda-a3d9b68c6e3d.webp" alt="Cristina" />
+              <div className="testimonio-header">
+                <h3 className="testimonio-name">Dignora</h3>
+                <p className="testimonio-role">Participante de la mentoría</p>
               </div>
-              <h4>CRISTINA</h4>
-              <p className="testimonio-tag">Mentalidad Imparable</p>
-              <p className="testimonio-text">"Logré identificar bloqueos que no sabía que tenía. Mi confianza creció enormemente en solo 5 días."</p>
+              <p className="testimonio-quote">
+                &ldquo;Segura porque poseo el conocimiento para trabajar en las cosas que antes no me atrevía. Tranquila porque sé cómo respirar y bloquear mentalmente esas emociones.&rdquo;
+              </p>
+              <div className="testimonio-capture-container">
+                <div className="testimonio-capture-wrap" onClick={() => setSelectedImage("/testimonio_dignora.jpeg")}>
+                  <img
+                    src="/testimonio_dignora.jpeg"
+                    alt="Captura testimonio Dignora"
+                    className="testimonio-capture-img"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage("/testimonio_dignora.jpeg")}
+                  className="btn-ver-captura"
+                >
+                  🔍 Ver captura ampliada
+                </button>
+              </div>
             </div>
 
+            {/* Zuly Rotavista */}
             <div className="testimonio-card">
-              <div className="testimonio-img-wrap">
-                <img src="/wp-content/uploads/2026/04/5c30acc7-2eeb-45dc-8aa9-85230c18d7e2.webp" alt="Sulanyi" />
+              <div className="testimonio-header">
+                <h3 className="testimonio-name">Zuly Rotavista</h3>
+                <p className="testimonio-role">Participante de la mentoría</p>
               </div>
-              <h4>SULANYI</h4>
-              <p className="testimonio-tag">Acción Inmediata</p>
-              <p className="testimonio-text">"Pasé de la parálisis por análisis a tomar decisiones con seguridad. ¡Altamente recomendado!"</p>
+              <p className="testimonio-quote">
+                &ldquo;Gracias a esta mentoría pude tener autocontrol de mis miedos, ya no me limito. Sé que cuando aparezcan, respiraré profundo y seguiré adelante.&rdquo;
+              </p>
+              <div className="testimonio-capture-container">
+                <div className="testimonio-capture-wrap" onClick={() => setSelectedImage("/testimonio_zuly.jpeg")}>
+                  <img
+                    src="/testimonio_zuly.jpeg"
+                    alt="Captura testimonio Zuly Rotavista"
+                    className="testimonio-capture-img"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage("/testimonio_zuly.jpeg")}
+                  className="btn-ver-captura"
+                >
+                  🔍 Ver captura ampliada
+                </button>
+              </div>
             </div>
 
+            {/* Cristina */}
             <div className="testimonio-card">
-              <div className="testimonio-img-wrap">
-                <img src="/wp-content/uploads/2026/04/7c5ec73e-3ef2-4420-b035-dbaab0d41ddd.webp" alt="Dignora" />
+              <div className="testimonio-header">
+                <h3 className="testimonio-name">Cristina</h3>
+                <p className="testimonio-role">Participante de la mentoría</p>
               </div>
-              <h4>DIGNORA</h4>
-              <p className="testimonio-tag">Transformación Real</p>
-              <p className="testimonio-text">"Duly tiene un método único para reprogramar la mente. Me siento con un enfoque total en mis metas."</p>
+              <p className="testimonio-quote">
+                &ldquo;Reconocí ese pensamiento de &lsquo;qué pensarán los demás&rsquo; y lo bloqueé automáticamente. Hoy no me dejé dominar por la mente, y para mí ya es un paso enorme.&rdquo;
+              </p>
+              <div className="testimonio-capture-container">
+                <div className="testimonio-capture-wrap" onClick={() => setSelectedImage("/testimonio_cristina.jpeg")}>
+                  <img
+                    src="/testimonio_cristina.jpeg"
+                    alt="Captura testimonio Cristina"
+                    className="testimonio-capture-img"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage("/testimonio_cristina.jpeg")}
+                  className="btn-ver-captura"
+                >
+                  🔍 Ver captura ampliada
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -464,11 +549,28 @@ export default function Mentoria() {
             <img src="/wp-content/uploads/2026/04/WhatsApp-Image-2025-06-03-at-17.24.13.webp" alt="Duly Hernández" />
           </div>
           <div className="bio-text-col">
-            <h2 className="bio-title">¿QUIÊN ES DULY HERNÁNDEZ?</h2>
+            <h2 className="bio-title">¿Quién es Duly Hernández?</h2>
             <div className="bio-underline"></div>
-            <p className="bio-description">
-              Soy experta en reprogramación mental y neurociencia aplicada. A través de mis programas he guíado a más de 1,000 personas a romper sus bloqueos, dejar de postergar y entrenar su mente para actuar a pesar del miedo. Mi propósito es acompañarte de forma cercana a tomar las riendas de tu vida con mayor conciencia y responsabilidad.
-            </p>
+            <div className="bio-description" style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "30px" }}>
+              <p style={{ margin: 0 }}>
+                Soy Duly Hernández, psicóloga y entrenadora en autocontrol mental, creadora del Método Imparable®.
+              </p>
+              <p style={{ margin: 0 }}>
+                Mi trabajo parte de una pregunta: ¿qué está haciendo tu mente cuando sabes lo que tienes que hacer, pero sigues sin hacerlo?
+              </p>
+              <p style={{ margin: 0 }}>
+                Combino herramientas de psicología, inteligencia emocional y entrenamiento mental para ayudarte a reconocer tus patrones automáticos y practicar respuestas nuevas, hasta que decidir y actuar deje de costarte tanto.
+              </p>
+              <p style={{ margin: 0 }}>
+                Personas como Keila pasaron de temerle a lo que iban a enfrentar a descubrir que el escenario real no era como lo dibujaba el miedo.
+              </p>
+              <p style={{ margin: 0 }}>
+                Entender lo que te pasa es importante. Aprender a responder diferente es lo que empieza a cambiarlo.
+              </p>
+              <p style={{ margin: 0, fontWeight: "700", color: "#0a1f44" }}>
+                En cinco días te acompaño a dar tu primer paso.
+              </p>
+            </div>
             <div style={{ marginTop: "30px", padding: "35px", background: "#0a1f44", borderRadius: "12px", color: "#fcf9f8", textAlign: "left", boxShadow: "0 15px 35px rgba(10, 31, 68, 0.15)" }}>
               <p style={{ fontSize: "1.25rem", fontWeight: "700", marginBottom: "15px" }}>Hoy tienes dos opciones.</p>
               <p style={{ fontSize: "1.1rem", marginBottom: "15px", fontStyle: "italic", opacity: 0.9 }}>Seguir dejando que tus patrones decidan por ti...</p>
@@ -479,6 +581,60 @@ export default function Mentoria() {
                 🔘 QUIERO EMPEZAR MI ENTRENAMIENTO
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIO DESTACADO KEILA */}
+      <section className="testimonio-destacado-keila" style={{ padding: "60px 20px", background: "#f8fafc", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0" }}>
+        <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <div style={{
+            background: "#ffffff",
+            borderRadius: "16px",
+            boxShadow: "0 15px 35px rgba(10, 31, 68, 0.08)",
+            border: "1px solid #e2e8f0",
+            padding: "40px 30px",
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+          }}>
+            <div style={{
+              width: "120px",
+              height: "120px",
+              borderRadius: "50%",
+              overflow: "hidden",
+              marginBottom: "20px",
+              border: "4px solid #E91E63",
+              boxShadow: "0 8px 20px rgba(233, 30, 99, 0.25)"
+            }}>
+              <img
+                src="/testimonio.jpeg"
+                alt="Keila, participante de la mentoría"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              />
+            </div>
+            
+            <p style={{
+              fontSize: "1.25rem",
+              lineHeight: "1.7",
+              color: "#0a1f44",
+              fontStyle: "italic",
+              fontWeight: "500",
+              maxWidth: "680px",
+              margin: "0 auto 20px auto"
+            }}>
+              &ldquo;Hoy reconfirmé que es mejor hacerlo con miedo que arrepentirme por el hubiera. El escenario mental versus el real no era como lo dibujaba el miedo.&rdquo;
+            </p>
+            
+            <p style={{
+              fontSize: "1.1rem",
+              fontWeight: "700",
+              color: "#E91E63",
+              margin: 0
+            }}>
+              — Keila, participante de la mentoría
+            </p>
           </div>
         </div>
       </section>
@@ -507,8 +663,12 @@ export default function Mentoria() {
                 a: "Las sesiones y el material quedarán grabados y tendrás acceso para repasarlos durante el tiempo asignado."
               },
               {
+                q: "¿Cuándo empiezo?",
+                a: "El grupo inicia cuando se completen los 20 cupos. Al inscribirte, te aviso por WhatsApp la fecha exacta de inicio. Si el grupo no se completa en 10 días, empezamos igual con quienes estén inscritos."
+              },
+              {
                 q: "¿Tiene alguna garantía?",
-                a: "Sí. Tienes 7 días de garantía oficial desde tu inscripción para solicitar el reembolso del 100% de tu dinero si sientes que la mentoría no es para ti."
+                a: "Sí. Tienes 14 días de garantía oficial desde tu inscripción para solicitar el reembolso del 100% de tu dinero si sientes que la mentoría no es para ti."
               }
             ].map((faq, idx) => (
               <div key={idx} className={`faq-row-item ${activeFaq === idx ? "active" : ""}`}>
@@ -566,13 +726,15 @@ export default function Mentoria() {
             <div className="shield-circle">🛡️</div>
           </div>
           <p className="garantia-text">
-            Queremos que tomes esta mentoría con total tranquilidad.
+            Quiero que tomes esta mentoría con total tranquilidad.
           </p>
           <p className="garantia-text">
-            Si durante los primeros <strong>7 días desde tu inscripción</strong> y dentro de las primeras <strong>72 horas de haber iniciado la mentoría</strong> sientes que esta experiencia no era lo que esperabas, te devolveremos el <strong>100% de tu inversión</strong>.
+            Si en los primeros <strong>14 días desde tu inscripción</strong> sientes que esta experiencia no era lo que esperabas, te devolveremos el <strong>100% de tu inversión</strong>.
           </p>
           <p className="garantia-text">Sin complicaciones. Sin preguntas innecesarias.</p>
-          <p className="garantia-text">Nuestro propósito no es que compres una mentoría.</p>
+          <p className="garantia-text">
+            Mi propósito no es que compres una mentoría, sino que des tu primer paso con la seguridad de que, si no es para ti, no pierdes tu dinero.
+          </p>
         </div>
       </section>
 
@@ -629,6 +791,23 @@ export default function Mentoria() {
           )}
         </div>
       </section>
+
+      {/* LIGHTBOX MODAL PARA CAPTURAS */}
+      {selectedImage && (
+        <div className="lightbox-backdrop" onClick={() => setSelectedImage(null)}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="lightbox-close"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Cerrar"
+            >
+              ✕
+            </button>
+            <img src={selectedImage} alt="Captura ampliada" className="lightbox-img" />
+          </div>
+        </div>
+      )}
 
       <footer style={{ textAlign: "center", padding: "30px", background: "#0a1f44", color: "#fcf9f8" }}>
         <p>&copy; {new Date().getFullYear()} Imparable Mentalidad. Todos los derechos reservados.</p>

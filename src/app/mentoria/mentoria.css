@@ -788,72 +788,186 @@
 
 /* TESTIMONIOS REALES */
 .mentoria-page-container .testimonios-section {
-    padding: 100px 0 !important;
+    padding: 90px 0 !important;
     background: #fafafa !important;
 }
 
 .mentoria-page-container .testimonios-title {
-    font-size: 2.5rem !important;
+    font-size: 2.3rem !important;
     text-align: center !important;
-    margin-bottom: 60px !important;
+    margin-bottom: 50px !important;
     color: #0a1f44 !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
 }
 
 .mentoria-page-container .testimonios-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
     gap: 30px !important;
-    max-width: 1000px !important;
+    max-width: 1200px !important;
     margin: 0 auto !important;
+    padding: 0 15px !important;
+}
+
+@media (min-width: 992px) {
+    .mentoria-page-container .testimonios-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
 }
 
 .mentoria-page-container .testimonio-card {
-    background: #fcf9f8 !important;
-    padding: 40px 30px !important;
-    border-radius: 8px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    background: #ffffff !important;
+    padding: 30px 25px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 30px rgba(10, 31, 68, 0.07) !important;
+    border: 1px solid #e2e8f0 !important;
     text-align: center !important;
-    transition: transform 0.3s !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 .mentoria-page-container .testimonio-card:hover {
-    transform: translateY(-10px) !important;
+    transform: translateY(-6px) !important;
+    box-shadow: 0 18px 40px rgba(10, 31, 68, 0.12) !important;
 }
 
-.mentoria-page-container .testimonio-img-wrap {
-    width: 120px !important;
-    height: 120px !important;
-    margin: 0 auto 20px !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-    border: 4px solid #E91E63 !important;
+.mentoria-page-container .testimonio-header {
+    margin-bottom: 12px !important;
 }
 
-.mentoria-page-container .testimonio-img-wrap img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-}
-
-.mentoria-page-container .testimonio-card h4 {
-    margin-bottom: 5px !important;
+.mentoria-page-container .testimonio-name {
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
     color: #0a1f44 !important;
-    font-size: 1.3rem !important;
+    margin: 0 0 4px 0 !important;
 }
 
-.mentoria-page-container .testimonio-tag {
-    font-size: 0.8rem !important;
+.mentoria-page-container .testimonio-role {
+    font-size: 0.88rem !important;
+    color: #718096 !important;
+    margin: 0 0 15px 0 !important;
+    font-weight: 500 !important;
+}
+
+.mentoria-page-container .testimonio-quote {
+    font-style: italic !important;
+    color: #2d3748 !important;
+    line-height: 1.65 !important;
+    font-size: 1.05rem !important;
+    margin: 0 0 20px 0 !important;
+    text-align: left !important;
+}
+
+.mentoria-page-container .testimonio-capture-container {
+    margin-top: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+}
+
+.mentoria-page-container .testimonio-capture-wrap {
+    width: 100% !important;
+    max-width: 400px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+    cursor: pointer !important;
+    position: relative !important;
+    background: #f7fafc !important;
+    transition: transform 0.2s ease !important;
+}
+
+.mentoria-page-container .testimonio-capture-wrap:hover {
+    transform: scale(1.02) !important;
+}
+
+.mentoria-page-container .testimonio-capture-img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 380px !important;
+    object-fit: cover !important;
+    object-position: top !important;
+    display: block !important;
+}
+
+.mentoria-page-container .btn-ver-captura {
+    background: transparent !important;
+    border: none !important;
     color: #E91E63 !important;
     font-weight: 700 !important;
-    margin-bottom: 20px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
+    font-size: 0.92rem !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    transition: background 0.2s ease !important;
 }
 
-.mentoria-page-container .testimonio-text {
-    font-style: italic !important;
-    color: #555 !important;
-    line-height: 1.6 !important;
+.mentoria-page-container .btn-ver-captura:hover {
+    background: rgba(233, 30, 99, 0.08) !important;
+}
+
+/* MODAL LIGHTBOX */
+.mentoria-page-container .lightbox-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(10, 31, 68, 0.88) !important;
+    backdrop-filter: blur(5px) !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
+    cursor: zoom-out !important;
+}
+
+.mentoria-page-container .lightbox-content {
+    position: relative !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    cursor: default !important;
+}
+
+.mentoria-page-container .lightbox-img {
+    max-width: 100% !important;
+    max-height: 85vh !important;
+    object-fit: contain !important;
+    border-radius: 12px !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+}
+
+.mentoria-page-container .lightbox-close {
+    position: absolute !important;
+    top: -45px !important;
+    right: 0 !important;
+    background: #E91E63 !important;
+    color: #ffffff !important;
+    border: none !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
 }
 
 /* QUIEN ES DULY HERNANDEZ */
