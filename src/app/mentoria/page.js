@@ -67,7 +67,7 @@ export default function Mentoria() {
       <section className="hero">
         <div className="container">
           <h1 style={{ textTransform: "none", color: "#0a1f44", fontSize: "3.2rem" }}>
-            Aprende a gobernar tu mente y deja de vivir en piloto automático.
+            ¿Sabes lo que tienes que hacer, pero sigues sin hacerlo?
           </h1>
           
           <p style={{ 
@@ -78,7 +78,7 @@ export default function Mentoria() {
             margin: "20px auto 40px auto", 
             fontWeight: "500" 
           }}>
-            Cinco días de entrenamiento mental para dejar de reaccionar en automático y empezar a dirigir tu vida con conciencia.
+            En 5 días entrenas tu mente para reconocer lo que te frena y dar tu primer paso, con acompañamiento diario por WhatsApp
           </p>
           <p style={{
             fontSize: "1.1rem",
@@ -599,21 +599,36 @@ export default function Mentoria() {
             flexDirection: "column",
             alignItems: "center"
           }}>
-            <div style={{
-              width: "120px",
-              height: "120px",
-              borderRadius: "50%",
-              overflow: "hidden",
-              marginBottom: "20px",
-              border: "4px solid #E91E63",
-              boxShadow: "0 8px 20px rgba(233, 30, 99, 0.25)"
-            }}>
+            <div 
+              onClick={() => setSelectedImage("/testimonio.jpeg")}
+              style={{
+                width: "120px",
+                height: "120px",
+                borderRadius: "50%",
+                overflow: "hidden",
+                marginBottom: "12px",
+                border: "4px solid #E91E63",
+                boxShadow: "0 8px 20px rgba(233, 30, 99, 0.25)",
+                cursor: "pointer",
+                transition: "transform 0.2s ease, box-shadow 0.2s ease"
+              }}
+              title="Haz clic para ver captura completa"
+            >
               <img
                 src="/testimonio.jpeg"
                 alt="Keila, participante de la mentoría"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
             </div>
+
+            <button
+              type="button"
+              onClick={() => setSelectedImage("/testimonio.jpeg")}
+              className="btn-ver-captura"
+              style={{ marginBottom: "20px" }}
+            >
+              🔍 Ver captura ampliada
+            </button>
             
             <p style={{
               fontSize: "1.25rem",
@@ -668,7 +683,7 @@ export default function Mentoria() {
               },
               {
                 q: "¿Tiene alguna garantía?",
-                a: "Sí. Tienes 14 días de garantía oficial desde tu inscripción para solicitar el reembolso del 100% de tu dinero si sientes que la mentoría no es para ti."
+                a: "Sí. Tienes 21 días de garantía oficial desde tu inscripción para solicitar el reembolso del 100% de tu dinero si sientes que la mentoría no es para ti."
               }
             ].map((faq, idx) => (
               <div key={idx} className={`faq-row-item ${activeFaq === idx ? "active" : ""}`}>
@@ -729,7 +744,7 @@ export default function Mentoria() {
             Quiero que tomes esta mentoría con total tranquilidad.
           </p>
           <p className="garantia-text">
-            Si en los primeros <strong>14 días desde tu inscripción</strong> sientes que esta experiencia no era lo que esperabas, te devolveremos el <strong>100% de tu inversión</strong>.
+            Si en los primeros <strong>21 días desde tu inscripción</strong> sientes que esta experiencia no era lo que esperabas, te devolveremos el <strong>100% de tu inversión</strong>.
           </p>
           <p className="garantia-text">Sin complicaciones. Sin preguntas innecesarias.</p>
           <p className="garantia-text">
